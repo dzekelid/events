@@ -28,7 +28,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/meetup/2-events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/meetup/2-event-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
