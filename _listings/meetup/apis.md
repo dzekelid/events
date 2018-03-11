@@ -28,7 +28,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/meetup/batch-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/meetup/urlname-boards-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
