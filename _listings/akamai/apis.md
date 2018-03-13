@@ -33,7 +33,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/akamai/events-v2-accountid-streams-universallive-sortfield,sortorder,limit,startindex-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/akamai/prolexic-analytics-v1-events-contract-contract-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
