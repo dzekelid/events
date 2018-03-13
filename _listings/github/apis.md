@@ -40,7 +40,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/github/users-username-events-orgs-org-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/github/users-username-received-events-get.md
 x-common:
 - type: x-net-library
   url: https://github.com/octokit/octokit.net
