@@ -26,7 +26,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/youtube/superchatevents-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/youtube/superchatevents-parameters.md
 x-common:
 - type: x-articles
   url: https://developers.google.com/youtube/articles/
