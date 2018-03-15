@@ -33,7 +33,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/akamai/etp-report-v1-configs-configid-threat-events-aggregate-starttimesec,endtimesec,dimension,filters-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/akamai/etp-report-v1-configs-configid-threat-events-details-starttimesec,endtimesec,dimension,filters-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
