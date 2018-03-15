@@ -33,7 +33,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/akamai/events-v2-accountid-events-eventid-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/akamai/events-v2-accountid-events-eventid-put.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
