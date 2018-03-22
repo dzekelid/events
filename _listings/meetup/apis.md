@@ -28,7 +28,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-rsvps-close-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-hosts-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
