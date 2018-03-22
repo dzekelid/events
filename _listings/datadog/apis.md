@@ -15,9 +15,9 @@ tags:
 - Orchestration
 - Monitoring
 - Aggregation
-created: "2018-03-15"
-modified: "2018-03-15"
-url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/datadog/apis.yaml
+created: "2018-03-21"
+modified: "2018-03-21"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/apis.yaml
 specificationVersion: "0.14"
 apis: []
 x-common:
