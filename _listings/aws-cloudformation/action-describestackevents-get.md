@@ -10,7 +10,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /?Action=DescribeStackEvents&k=1:
+  /?Action=DescribeStackEvents:
     get:
       summary: ' Describe Stack Events '
       description: Returns all stack related events for a specified stack in reverse
