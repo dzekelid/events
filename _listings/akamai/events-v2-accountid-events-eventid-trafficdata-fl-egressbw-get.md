@@ -35,6 +35,7 @@ paths:
       - trafficdata
       - fl
       - egressbw
+      - aggregation
 definitions: []
 x-collection-name: Akamai
 x-streamrank:
