@@ -18,9 +18,9 @@ tags:
 - Photo
 - Images
 - Getting Started
-created: "2018-03-13"
-modified: "2018-03-13"
-url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/getty-images/apis.yaml
+created: "2018-03-21"
+modified: "2018-03-21"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/getty-images/apis.yaml
 specificationVersion: "0.14"
 apis:
 - name: Getty Images
@@ -31,7 +31,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/getty-images/v3-events-id-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/getty-images/v3-events-get.md
 x-common:
 - type: x-authentication
   url: https://github.com/gettyimages/connect#authentication
