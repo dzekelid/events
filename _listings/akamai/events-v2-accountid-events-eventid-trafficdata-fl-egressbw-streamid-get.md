@@ -40,6 +40,7 @@ paths:
       - fl
       - egressbw
       - stream
+      - aggregation
 definitions: []
 x-collection-name: Akamai
 x-streamrank:
