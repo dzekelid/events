@@ -32,7 +32,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/microsoft-graph/users-id-|-userprincipalname-calendargroup-calendars-id-events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/microsoft-graph/me-calendargroups-id-calendars-id-events-get.md
 x-common:
 - type: x-change-loge
   url: https://developer.microsoft.com/en-us/graph/docs/overview/changelog
