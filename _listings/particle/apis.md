@@ -29,7 +29,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-deviceid-events-eventprefix-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-events-post.md
 x-common:
 - type: x-base-url
   url: api.particle.io
