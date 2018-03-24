@@ -26,7 +26,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/youtube/fanfundingevents-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/youtube/fanfundingevents-parameters.md
 x-common:
 - type: x-articles
   url: https://developers.google.com/youtube/articles/
