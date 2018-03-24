@@ -31,7 +31,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudtrail/action-lookupevents-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudtrail/action-puteventselectors-get.md
 x-common:
 - type: x-console
   url: https://console.aws.amazon.com/cloudtrail/home
