@@ -33,7 +33,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-srip-sourcebandwidth-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-srip-sourcebandwidth-slotid-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
