@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS ElastiCache API
+  title: Amazon ElastiCache API Describe Events
   version: 1.0.0
+  description: |-
+    Returns events related to cache clusters, cache
+                security groups, and cache parameter groups.
 schemes:
 - http
 produces:
