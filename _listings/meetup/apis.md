@@ -47,15 +47,20 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/activity-get.md
-- name: Meetup Event Hosts
-  description: Returns the list of hosts for a given event
+- name: Meetup Event Comments List
+  description: |-
+    Lists the comments and replies posted in a given Meetup Event.
+
+    To view the list of likes for a comment or reply
+    see the [likes](/meetup_api/docs/:urlname/events/:event_id/comments/:comment_id/likes/)
+    endpoint
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-hosts-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-comments-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
