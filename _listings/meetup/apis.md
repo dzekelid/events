@@ -47,52 +47,28 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-patch.md
-- name: Meetup Find Groups
-  description: Text, location, category and friend-based group searches
+- name: Meetup Notifications
+  description: Returns all recent Meetup notifications for the authorized member.
+    To mark notifications read use [/notifications/read](/meetup_api/docs/notifications/read/)
+    endpoint. To get the authenticated Member's current unread count, request it in
+    an [HTTP header](/meetup_api/docs/#meta-headers).
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
-- name: Meetup Recommended Groups
-  description: Returns groups Meetup finds relevant to you
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/notifications-get.md
+- name: Meetup Find Topics
+  description: Find topics by name
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/recommended-groups-get.md
-- name: Meetup Similar groups
-  description: Renders a list of similar groups
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
-  humanURL: http://www.meetup.com/
-  baseURL: https://api.meetup.com//
-  tags: Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-similar-groups-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-topics-get.md
 x-common:
-- type: x-base
-  url: http://api.meetup.com
-- type: x-developer
-  url: http://www.meetup.com/meetup_api/
-- type: x-github
-  url: https://github.com/meetup
-- type: x-pricing
-  url: http://www.meetup.com/pricing/
-- type: x-privacy
-  url: http://www.meetup.com/privacy/
-- type: x-support
-  url: http://www.meetup.com/help/
-- type: x-terms-of-service
-  url: http://www.meetup.com/terms/
-- type: x-twitter
-  url: https://twitter.com/MeetupAPI
-- type: x-website
-  url: http://www.meetup.com/
 - type: x-base
   url: http://api.meetup.com
 - type: x-developer
