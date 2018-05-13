@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS RDS API
+  title: Amazon RDS API Describe Events
   version: 1.0.0
+  description: Returns events related to DB instances, DB security groups, DB snapshots,
+    and DB parameter groups for the past 14 days.
 schemes:
 - http
 produces:
