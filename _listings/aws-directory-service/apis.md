@@ -35,16 +35,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-directory-service/action-registereventtopic-get.md
-- name: AWS Directory Service API Deregister Event Topic
-  description: Removes the specified directory as a publisher to the specified SNS
-    topic.
+- name: AWS Directory Service API Describe Event Topics
+  description: Obtains information about which SNS topics receive status messages
+    from the specified directory.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Security-Identity_AWSDirectoryService.png
   humanURL: https://aws.amazon.com/directoryservice/
   baseURL: http:://{host}//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-directory-service/action-deregistereventtopic-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-directory-service/action-describeeventtopics-get.md
 x-common:
 - type: x-command-line-interface
   url: http://docs.aws.amazon.com/cli/latest/reference/ds/index.html
