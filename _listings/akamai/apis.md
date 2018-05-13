@@ -34,15 +34,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-fl-egressbw-streamid-get.md
-- name: Akamai API Get Request Data for Silverlight Live Streams
-  description: Get Request Data for Silverlight Live Streams
+- name: Akamai API Get Request Data for a Silverlight Live Stream
+  description: Get Request Data for a Silverlight Live Stream
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Akamai_Technologies,_Inc._Logo.png
   humanURL: https://akamai.com
   baseURL: https://developer.akamai.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-hdsll-egressrequests-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-hdsll-egressrequests-streamid-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
