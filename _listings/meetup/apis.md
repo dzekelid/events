@@ -47,15 +47,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-patch.md
-- name: Meetup Open Rsvps
-  description: Opens rsvps for an event
+- name: Meetup Close Rsvps
+  description: Closes rsvps for an event
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-rsvps-open-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-rsvps-close-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
