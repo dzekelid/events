@@ -38,8 +38,8 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photo-comment-post.md
-- name: Meetup Attendance
-  description: Lists attendance records for Meetup events. Limited for use by administrative
+- name: Meetup Attendance Taking
+  description: Takes member attendance for an event. Limited for use by administrative
     members.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
@@ -47,7 +47,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-attendance-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-attendance-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
