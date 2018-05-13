@@ -1,9 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Stripe
-  description: The Stripe REST API. Please see https://stripe.com/docs/api for more
-    details.
+  title: Stripe Get Events
+  description: Retrieves the details of an event. Supply the unique identifier of
+    the event, which you might have received in a webhook.
   termsOfService: https://stripe.com/us/terms/
   contact:
     name: Stripe Dev Platform Team
