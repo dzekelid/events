@@ -30,7 +30,33 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-events-post.md
+- name: Particle Get Devices Events
+  description: Open a stream of Server Sent Events for all public events and private
+    events for your devices.
+  image: ""
+  humanURL: https://www.particle.io/
+  baseURL: https://api.particle.io/v1/
+  tags: Events
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-events-eventprefix-get.md
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-events-eventprefix-get-postman.md
 x-common:
+- type: x-base-url
+  url: api.particle.io
+- type: x-developer
+  url: https://www.particle.io/products/software/developer-tools
+- type: x-documentation
+  url: https://docs.particle.io/guide/getting-started/build/raspberry-pi/
+- type: x-faq
+  url: https://docs.particle.io/support/support-and-fulfillment/faq/
+- type: x-getting-started
+  url: https://login.particle.io/login?app=web-ide&redirect=https://build.particle.io/build
+- type: x-support
+  url: https://docs.particle.io/support/support-and-fulfillment/menu-base/
+- type: x-website
+  url: https://www.particle.io/
 - type: x-base-url
   url: api.particle.io
 - type: x-developer
