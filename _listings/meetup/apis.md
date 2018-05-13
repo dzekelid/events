@@ -56,15 +56,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
-- name: Meetup Event Comment Unlike
-  description: Unlike a given event comment
+- name: Meetup Member Photo Delete
+  description: Deletes a member photo by id
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-comments-comment-id-likes-delete.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/members-member-id-photos-photo-id-delete.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
