@@ -1,10 +1,47 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Get Hook Events
+  description: |-
+    Returns the webhook resource or subject types on which webhooks can
+    be registered.
+
+    Each resource/subject type contains an `events` link that returns the
+    paginated list of specific events each individual subject type can
+    emit.
+
+    This endpoint is publicly accessible and does not require
+    authentication or scopes.
+
+    Example:
+
+    ```
+    $ curl https://api.bitbucket.org/2.0/hook_events
+
+    {
+        "repository": {
+            "links": {
+                "events": {
+                    "href": "https://api.bitbucket.org/2.0/hook_events/repository"
+                }
+            }
+        },
+        "team": {
+            "links": {
+                "events": {
+                    "href": "https://api.bitbucket.org/2.0/hook_events/team"
+                }
+            }
+        },
+        "user": {
+            "links": {
+                "events": {
+                    "href": "https://api.bitbucket.org/2.0/hook_events/user"
+                }
+            }
+        }
+    }
+    ```
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
