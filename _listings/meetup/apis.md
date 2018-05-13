@@ -29,16 +29,22 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-get.md
-- name: Meetup Events
-  description: Deprecated API method for accessing meetup events. Please see [/2/events](/meetup_api/docs/2/events/)
-    and [/2/open_events](/meetup_api/docs/2/open_events/) for replacements.
+- name: Meetup OpenEvents
+  description: Searches for recent and upcoming public events hosted by Meetup groups.
+    Its search window  is the past one month through the next three months, and is
+    subject to change. Open Events is optimized to search for current events by location,
+    category, topic, or text, and only lists Meetups that have **3 or more RSVPs**.
+    The number or results returned with each request is not guaranteed to be the same
+    as the page size due to secondary filtering. If you're looking for a particular
+    event or events within a particular group, use the standard [Events](/meetup_api/docs/2/events/)
+    method.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-open-events-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
