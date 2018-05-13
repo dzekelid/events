@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS CloudTrail API
+  title: AWS CloudTrail API Lookup Events
   version: 1.0.0
+  description: |-
+    Looks up API activity events captured by CloudTrail that create, update, or delete
+             resources in your account.
 schemes:
 - http
 produces:
