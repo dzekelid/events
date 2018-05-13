@@ -35,16 +35,17 @@ apis:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/stripe/events-id-retry-post.md
 - name: Stripe Get Events
-  description: List events, going back up to 30 days.
+  description: Retrieves the details of an event. Supply the unique identifier of
+    the event, which you might have received in a webhook.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/stripe-black.png
   humanURL: https://stripe.com/
   baseURL: https://api.stripe.com/v1/
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/stripe/events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/stripe/events-id-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/stripe/events-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/stripe/events-id-get-postman.md
 x-common:
 - type: x-base
   url: https://api.stripe.com/
