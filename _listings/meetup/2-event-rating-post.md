@@ -1,11 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Event Rating
+  description: This method allows members to posts rating for an event after it's
+    occurred. Only permitted for members who rsvp'd yes or maybe to the event
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -24,17 +22,17 @@ paths:
       operationId: events
       parameters:
       - in: query
-        name: '*event_id'
-        description: The ID of the event to fetch ratings data for
-        type: string
-      - in: query
-        name: '*rating'
-        description: The member's rating (either 1, 2, 3, 4, or 5)
-        type: string
-      - in: query
         name: attendee_count
         description: 'DEPRECATED: The number of attendees for the event (organizers/assistant
           organizers/co-organizers/event organizers/event hosts only)'
+        type: string
+      - in: query
+        name: event_id
+        description: The ID of the event to fetch ratings data for
+        type: string
+      - in: query
+        name: rating
+        description: The member's rating (either 1, 2, 3, 4, or 5)
         type: string
       responses:
         200:
