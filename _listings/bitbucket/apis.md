@@ -26,56 +26,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bitbucket/hook-events-subject-type-parameters.md
-- name: Bitbucket Get Hook Events
-  description: |-
-    Returns the webhook resource or subject types on which webhooks can
-    be registered.
-
-    Each resource/subject type contains an `events` link that returns the
-    paginated list of specific events each individual subject type can
-    emit.
-
-    This endpoint is publicly accessible and does not require
-    authentication or scopes.
-
-    Example:
-
-    ```
-    $ curl https://api.bitbucket.org/2.0/hook_events
-
-    {
-        "repository": {
-            "links": {
-                "events": {
-                    "href": "https://api.bitbucket.org/2.0/hook_events/repository"
-                }
-            }
-        },
-        "team": {
-            "links": {
-                "events": {
-                    "href": "https://api.bitbucket.org/2.0/hook_events/team"
-                }
-            }
-        },
-        "user": {
-            "links": {
-                "events": {
-                    "href": "https://api.bitbucket.org/2.0/hook_events/user"
-                }
-            }
-        }
-    }
-    ```
+- name: Bitbucket Parameters Hook Events
+  description: Parameters hook events
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/bitbucket-logo.png
   humanURL: https://bitbucket.org/
   baseURL: https://api.bitbucket.org//2.0
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bitbucket/hook-events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bitbucket/hook-events-parameters.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bitbucket/hook-events-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bitbucket/hook-events-parameters-postman.md
 x-common:
 - type: x-developer
   url: https://developer.atlassian.com/cloud/bitbucket/
