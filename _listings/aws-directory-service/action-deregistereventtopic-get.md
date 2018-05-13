@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Directory Service API
+  title: AWS Directory Service API Deregister Event Topic
   version: 1.0.0
+  description: Removes the specified directory as a publisher to the specified SNS
+    topic.
 schemes:
 - http
 produces:
