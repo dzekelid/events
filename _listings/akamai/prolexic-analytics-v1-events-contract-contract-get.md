@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: Akamai Merged API
+  title: Akamai API List Events
+  description: List Events
   version: 1.0.0
+host: developer.akamai.com
+basePath: /
 schemes:
 - http
 produces:
@@ -16,7 +19,7 @@ paths:
       description: List Events
       operationId: prolexicanalyticsv1eventscontractcontract
       parameters:
-      - in: String
+      - in: query
         name: contract
         description: Name of contract events should be attached to
         type: string
