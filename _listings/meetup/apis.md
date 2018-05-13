@@ -29,16 +29,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-get.md
-- name: Meetup Profile Create (Group Join)
-  description: This method allows an authenticated member to join a group by creating
-    a profile
+- name: Meetup Profile Edit
+  description: Update a member's group profile
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-profile-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-profile-gid-mid-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
