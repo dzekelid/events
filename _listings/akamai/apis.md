@@ -34,15 +34,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-fl-egressbw-streamid-get.md
-- name: Akamai API List Events
-  description: List Events
+- name: Akamai API List Critical Events
+  description: List Critical Events
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Akamai_Technologies,_Inc._Logo.png
   humanURL: https://akamai.com
   baseURL: https://developer.akamai.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/prolexic-analytics-v1-events-contract-contract-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/prolexic-analytics-v1-critical-events-contract-contract-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
