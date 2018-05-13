@@ -34,15 +34,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-fl-egressbw-streamid-get.md
-- name: Akamai API Get Viewer Data for Flash Live Streams
-  description: Get Viewer Data for Flash Live Streams
+- name: Akamai API Get Viewer Data for a Flash Live Stream
+  description: Get Viewer Data for a Flash Live Stream
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Akamai_Technologies,_Inc._Logo.png
   humanURL: https://akamai.com
   baseURL: https://developer.akamai.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-fl-egressviewers-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-fl-egressviewers-streamid-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
