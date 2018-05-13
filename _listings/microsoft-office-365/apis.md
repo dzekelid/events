@@ -37,15 +37,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/microsoft-office-365/events-event-id-accept-parameters.md
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/microsoft-office-365/events-event-id-accept-parameters-postman.md
-- name: Microsoft Office 365 Add Events Event Tentatively Accept
-  description: Post events event  tentativelyaccept
+- name: Microsoft Office 365 Parameters Events Event Tentatively Accept
+  description: Parameters events event  tentativelyaccept
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/microsoft-office.png
   humanURL: http://office.com
   baseURL: https://outlook.office365.com//ews/odata/Me
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/microsoft-office-365/events-event-id-tentativelyaccept-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/microsoft-office-365/events-event-id-tentativelyaccept-parameters.md
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/microsoft-office-365/events-event-id-tentativelyaccept-parameters-postman.md
 x-common:
 - type: x-developer
   url: http://dev.office.com
