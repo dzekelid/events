@@ -56,16 +56,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
-- name: Meetup Recommend Group Topics
-  description: Recommends suggestions for group topics based on a text search or other
-    topics
+- name: Meetup Recommended Groups
+  description: Returns groups Meetup finds relevant to you
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/recommended-group-topics-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/recommended-groups-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
