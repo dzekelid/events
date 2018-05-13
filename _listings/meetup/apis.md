@@ -29,22 +29,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-get.md
-- name: Meetup Cities
-  description: Returns Meetup cities. This method supports search by latitude/longitude/radius,
-    by country/state, by query term/zip, or a combination of all of these. Location-only
-    searches by lat and lon return all cities within a radius of the provided coordinates.
-    Searches with a query return up to 10 cities matching the term, and can be sorted
-    by size or distance to a given coordinate. 'smart' ordering can be used to return
-    the match(es) with the highest member_count, unless a smaller size match exists
-    nearby the given coordinates. Query searches are supported for country but not
-    country and state
+- name: Meetup Members
+  description: API method for accessing members of Meetup Groups
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-cities-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/members-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
