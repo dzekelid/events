@@ -1,11 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Photo Comments v2
+  description: This method returns comments on meetup photos. To post messages, see
+    the corresponding write method
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -23,10 +21,6 @@ paths:
       operationId: photos
       parameters:
       - in: query
-        name: '*photo_id'
-        description: Return comments on these photos, separated by commas
-        type: string
-      - in: query
         name: fields
         description: Request that additional fields (separated by commas) be included
           in the output
@@ -34,6 +28,10 @@ paths:
       - in: query
         name: member_id
         description: Return comments for the given member_ids, separated by commas
+        type: string
+      - in: query
+        name: photo_id
+        description: Return comments on these photos, separated by commas
         type: string
       responses:
         200:
