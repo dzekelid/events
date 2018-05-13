@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Directory Service API
+  title: AWS Directory Service API Register Event Topic
   version: 1.0.0
+  description: Associates a directory with an SNS topic.
 schemes:
 - http
 produces:
