@@ -30,7 +30,7 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-events-post.md
-- name: Particle Get Devices Events
+- name: Particle Get Devices Device Events
   description: Open a stream of Server Sent Events for all public events and private
     events for your devices.
   image: ""
@@ -39,9 +39,9 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-events-eventprefix-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-deviceid-events-eventprefix-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-events-eventprefix-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/particle/devices-deviceid-events-eventprefix-get-postman.md
 x-common:
 - type: x-base-url
   url: api.particle.io
