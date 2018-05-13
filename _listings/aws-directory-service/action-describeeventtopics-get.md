@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Directory Service API
+  title: AWS Directory Service API Describe Event Topics
   version: 1.0.0
+  description: Obtains information about which SNS topics receive status messages
+    from the specified directory.
 schemes:
 - http
 produces:
