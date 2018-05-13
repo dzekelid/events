@@ -47,16 +47,18 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-patch.md
-- name: Meetup Search Issued Pro Tickets
-  description: Redeemed chapter, redeemed member, status, and timestamp for tickets
-    belonging to Pro organization.
+- name: Meetup Notifications
+  description: Returns all recent Meetup notifications for the authorized member.
+    To mark notifications read use [/notifications/read](/meetup_api/docs/notifications/read/)
+    endpoint. To get the authenticated Member's current unread count, request it in
+    an [HTTP header](/meetup_api/docs/#meta-headers).
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/pro-urlname-tickets-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/notifications-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
