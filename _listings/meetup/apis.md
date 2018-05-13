@@ -65,16 +65,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/recommended-groups-get.md
-- name: Meetup Recommended Venues
-  description: Returns venues Meetup finds relevant to you based on location and category.
-    This method does not yet support sorting or pagination.
+- name: Meetup Similar groups
+  description: Renders a list of similar groups
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/recommended-venues-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-similar-groups-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
