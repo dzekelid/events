@@ -29,15 +29,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-get.md
-- name: Meetup Member Edit
-  description: Edit the authorized member's attributes
+- name: Meetup Profiles
+  description: This method returns member *profiles* associated with a particular
+    group. Meetup members have separate profiles for each group they join.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-member-id-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-profiles-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
