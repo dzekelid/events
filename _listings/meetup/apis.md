@@ -56,15 +56,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
-- name: Meetup Event Comment Like
-  description: Like a given event comment
+- name: Meetup Event Comment Unlike
+  description: Unlike a given event comment
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-comments-comment-id-likes-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-event-id-comments-comment-id-likes-delete.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
