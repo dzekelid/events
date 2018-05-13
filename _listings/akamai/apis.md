@@ -25,15 +25,15 @@ modified: "2018-03-24"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/apis.yaml
 specificationVersion: "0.14"
 apis:
-- name: Akamai API List Events Current for Specific Time
-  description: List Events Current for Specific Time
+- name: Akamai API List Upcoming Events
+  description: List Upcoming Events
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Akamai_Technologies,_Inc._Logo.png
   humanURL: https://akamai.com
   baseURL: https://developer.akamai.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-live-time-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-upcoming-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
