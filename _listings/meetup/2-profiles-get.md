@@ -1,11 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Profiles
+  description: This method returns member *profiles* associated with a particular
+    group. Meetup members have separate profiles for each group they join.
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -24,25 +22,21 @@ paths:
       operationId: profiles
       parameters:
       - in: query
-        name: '*group_id'
+        name: fields
+        description: comma delimited list of optional response properties
+        type: string
+      - in: query
+        name: group_id
         description: Return profiles in the group with this ID
         type: string
       - in: query
-        name: '*group_urlname'
+        name: group_urlname
         description: Return profiles for the group with the given custom URL path
         type: string
       - in: query
-        name: '*member_id'
+        name: member_id
         description: Return the profiles for members with these IDs, separated by
           commas
-        type: string
-      - in: query
-        name: '*topic, groupnum'
-        description: Group identification by topic, deprecated
-        type: string
-      - in: query
-        name: fields
-        description: comma delimited list of optional response properties
         type: string
       - in: query
         name: role
@@ -52,6 +46,10 @@ paths:
       - in: query
         name: status
         description: Status filter for members
+        type: string
+      - in: query
+        name: topic, groupnum
+        description: Group identification by topic, deprecated
         type: string
       responses:
         200:
