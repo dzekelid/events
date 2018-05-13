@@ -24,7 +24,31 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudformation/action-describestackevents-get.md
+- name: AWS CloudFormation API Describe Stack Events
+  description: Returns all stack related events for a specified stack in reverse chronological
+    order.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Management-Tools_AWSCloudFormation.png
+  humanURL: https://aws.amazon.com/cloudformation/
+  baseURL: http:://{host}//
+  tags: Events
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudformation/action-describestackevents-get.md
 x-common:
+- type: x-command-line-interface
+  url: http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html
+- type: x-documentation
+  url: http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/
+- type: x-faq
+  url: https://aws.amazon.com/cloudformation/faqs/
+- type: x-getting-started
+  url: https://aws.amazon.com/cloudformation/getting-started/
+- type: x-pricing
+  url: https://aws.amazon.com/cloudformation/pricing/
+- type: x-sdk
+  url: https://aws.amazon.com/cloudformation/aws-cloudformation-templates/
+- type: x-website
+  url: https://aws.amazon.com/cloudformation/
 - type: x-command-line-interface
   url: http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html
 - type: x-documentation
