@@ -47,8 +47,8 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-patch.md
-- name: Meetup Group Topics Add
-  description: Associates topics with a given Meetup group. Limited to organizers
+- name: Meetup Group Topics Remove
+  description: Disassociates topics with a given Meetup group. Limited to organizers
     of the group. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes)
     permission.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
@@ -57,7 +57,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-topics-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-topics-delete.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
