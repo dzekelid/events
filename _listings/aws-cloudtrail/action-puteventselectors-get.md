@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS CloudTrail API
+  title: AWS CloudTrail API Put Event Selectors
   version: 1.0.0
+  description: Configures an event selector for your trail.
 schemes:
 - http
 produces:
