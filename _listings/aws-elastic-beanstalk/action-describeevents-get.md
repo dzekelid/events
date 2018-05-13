@@ -1,8 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Elastic Beanstalk API
+  title: AWS Elastic Beanstalk API Describe Events
   version: 1.0.0
+  description: Returns list of event descriptions matching criteria up to the last
+    6 weeks.
 schemes:
 - http
 produces:
