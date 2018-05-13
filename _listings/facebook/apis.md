@@ -27,15 +27,15 @@ modified: "2018-05-13"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/facebook/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Facebook Get Analytics App Events Export
-  description: Analytics App Events Export
+- name: Facebook Get Group Events
+  description: All events that belong to a group.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/facebook_2015_logo_detail.png
   humanURL: https://facebook.com
   baseURL: https://graph.facebook.com//v3.0
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/facebook/#123;analytics-app-events-export-id-#125;-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/facebook/#123;group-id-#125;-events-get.md
 x-common:
 - type: x-android-sdk
   url: https://developers.facebook.com/docs/android/share
