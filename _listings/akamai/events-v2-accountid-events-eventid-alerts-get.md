@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: Akamai Merged API
+  title: Akamai API List Alerts per Event
+  description: List Alerts per Event
   version: 1.0.0
+host: developer.akamai.com
+basePath: /
 schemes:
 - http
 produces:
@@ -16,11 +19,11 @@ paths:
       description: List Alerts per Event
       operationId: eventsv2accountideventseventidalerts
       parameters:
-      - in: String
+      - in: query
         name: accountId
         description: Unique identifier for the account
         type: string
-      - in: Number
+      - in: query
         name: eventId
         description: Unique identifier for the event
         type: string
