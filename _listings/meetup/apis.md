@@ -29,16 +29,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-get.md
-- name: Meetup Concierge
-  description: Recommends upcoming meetups for the authorized member in a given location
-    and in thier groups
+- name: Meetup Groups
+  description: Fetch information about Meetup Groups.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-concierge-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-groups-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
