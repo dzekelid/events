@@ -47,18 +47,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-patch.md
-- name: Meetup Event Payments
-  description: Allows organizers of a group to note payments made by members for an
-    event. This is the 'Mark Paid' feature seen in the RSVP listings on event details
-    pages and affects the 'pay_status' response fields in [2/rsvps](/meetup_api/docs/2/rsvps/#response)
-    for paid events
+- name: Meetup Album Photos
+  description: Lists photos for a given photo album
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-payments-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-photo-albums-album-id-photos-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
