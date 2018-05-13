@@ -56,15 +56,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
-- name: Meetup Member Photo Upload
-  description: Support for uploading new Member photos
+- name: Meetup Search Pro Groups
+  description: Name and statistics range search for the meetup groups belonging to
+    Pro organization.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/members-member-id-photos-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/pro-urlname-groups-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
