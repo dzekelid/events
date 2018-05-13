@@ -25,15 +25,15 @@ modified: "2018-03-24"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/apis.yaml
 specificationVersion: "0.14"
 apis:
-- name: Akamai API Report Security Event Time Series
-  description: Report Security Event Time Series
+- name: Akamai API Report AUP Event Details
+  description: Report AUP Event Details
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Akamai_Technologies,_Inc._Logo.png
   humanURL: https://akamai.com
   baseURL: https://developer.akamai.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/etp-report-v1-configs-configid-threat-events-time-series-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/etp-report-v1-configs-configid-aup-events-details-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
