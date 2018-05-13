@@ -1,11 +1,15 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup OpenEvents
+  description: Searches for recent and upcoming public events hosted by Meetup groups.
+    Its search window  is the past one month through the next three months, and is
+    subject to change. Open Events is optimized to search for current events by location,
+    category, topic, or text, and only lists Meetups that have **3 or more RSVPs**.
+    The number or results returned with each request is not guaranteed to be the same
+    as the page size due to secondary filtering. If you're looking for a particular
+    event or events within a particular group, use the standard [Events](/meetup_api/docs/2/events/)
+    method.
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -24,48 +28,6 @@ paths:
       operationId: events
       parameters:
       - in: query
-        name: '*category'
-        description: Return events in the specified category or categories specified
-          by commas
-        type: string
-      - in: query
-        name: '*city'
-        description: A valid city
-        type: string
-      - in: query
-        name: '*country'
-        description: A valid country code
-        type: string
-      - in: query
-        name: '*lat'
-        description: A valid latitude, limits the returned group events to those within
-          radius miles
-        type: string
-      - in: query
-        name: '*lon'
-        description: A valid longitude, limits the returned group events to those
-          within radius miles
-        type: string
-      - in: query
-        name: '*state'
-        description: If searching in a country with states, a valid 2 character state
-          code
-        type: string
-      - in: query
-        name: '*text'
-        description: Events that contain the given term or terms somewhere in their
-          content
-        type: string
-      - in: query
-        name: '*topic'
-        description: Return events in the specified topic or topics specified by commas
-        type: string
-      - in: query
-        name: '*zip'
-        description: A valid US zip code, limits the returned groups to those within
-          radius miles
-        type: string
-      - in: query
         name: and_text
         description: Changes the interpretation of the "text" field from OR'd terms
           to AND'd terms
@@ -75,14 +37,37 @@ paths:
         description: "2"
         type: string
       - in: query
+        name: category
+        description: Return events in the specified category or categories specified
+          by commas
+        type: string
+      - in: query
+        name: city
+        description: A valid city
+        type: string
+      - in: query
+        name: country
+        description: A valid country code
+        type: string
+      - in: query
         name: fields
         description: Request that additional fields (separated by commas) be included
           in the output
         type: string
       - in: query
+        name: lat
+        description: A valid latitude, limits the returned group events to those within
+          radius miles
+        type: string
+      - in: query
         name: limited_events
         description: Include limited event information for private groups that wish
           to expose only a small amount of information about their events
+        type: string
+      - in: query
+        name: lon
+        description: A valid longitude, limits the returned group events to those
+          within radius miles
         type: string
       - in: query
         name: radius
@@ -99,8 +84,18 @@ paths:
           milliseconds since the epoch
         type: string
       - in: query
+        name: state
+        description: If searching in a country with states, a valid 2 character state
+          code
+        type: string
+      - in: query
         name: status
         description: Status may be "upcoming", "past" or both separated by a comma
+        type: string
+      - in: query
+        name: text
+        description: Events that contain the given term or terms somewhere in their
+          content
         type: string
       - in: query
         name: text_format
@@ -111,6 +106,15 @@ paths:
         description: Return events scheduled within the given time range, defined
           by two times separated with a single comma
         type: string
+      - in: query
+        name: topic
+        description: Return events in the specified topic or topics specified by commas
+        type: string
+      - in: query
+        name: zip
+        description: A valid US zip code, limits the returned groups to those within
+          radius miles
+        type: string
       responses:
         200:
           description: OK
@@ -119,16 +123,16 @@ paths:
 definitions: []
 x-collection-name: Meetup
 x-streamrank:
-  polling_total_time_average: 0
-  polling_size_download_average: 0
-  streaming_total_time_average: 0
-  streaming_size_download_average: 0
-  change_yes: 0
-  change_no: 0
-  time_percentage: 0
-  size_percentage: 0
-  change_percentage: 0
-  last_run: ""
-  days_run: 0
-  minute_run: 0
+  polling_total_time_average: "1.7"
+  polling_size_download_average: "1320517.68"
+  streaming_total_time_average: "0.86"
+  streaming_size_download_average: "662905.33"
+  change_yes: "661"
+  change_no: "1626"
+  time_percentage: "49"
+  size_percentage: "50"
+  change_percentage: "29"
+  last_run: "2018-05-12"
+  days_run: "8"
+  minute_run: "0"
 ---
