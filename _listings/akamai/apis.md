@@ -34,15 +34,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-fl-egressbw-streamid-get.md
-- name: Akamai API Get SRIP Bandwidth
-  description: Get SRIP Bandwidth
+- name: Akamai API Get SRIP Bandwidth per Slot
+  description: Get SRIP Bandwidth per Slot
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Akamai_Technologies,_Inc._Logo.png
   humanURL: https://akamai.com
   baseURL: https://developer.akamai.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-srip-sourcebandwidth-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/akamai/events-v2-accountid-events-eventid-trafficdata-srip-sourcebandwidth-slotid-get.md
 x-common:
 - type: x-base
   url: https://api.ccu.akamai.com
