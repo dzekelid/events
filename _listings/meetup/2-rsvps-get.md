@@ -1,11 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup RSVPs v2
+  description: Query for Event RSVPs by event
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -23,17 +20,17 @@ paths:
       operationId: rsvps
       parameters:
       - in: query
-        name: '*callback'
+        name: api_version
+        description: "2"
+        type: string
+      - in: query
+        name: callback
         description: Name of a function to be called with an array of RSVP notification
           objects
         type: string
       - in: query
-        name: '*event_id'
+        name: event_id
         description: Multiple alphanumeric ids may be separated with commas
-        type: string
-      - in: query
-        name: api_version
-        description: "2"
         type: string
       - in: query
         name: event_id
@@ -66,16 +63,16 @@ paths:
 definitions: []
 x-collection-name: Meetup
 x-streamrank:
-  polling_total_time_average: 0
-  polling_size_download_average: 0
-  streaming_total_time_average: 0
-  streaming_size_download_average: 0
-  change_yes: 0
-  change_no: 0
-  time_percentage: 0
-  size_percentage: 0
-  change_percentage: 0
-  last_run: ""
-  days_run: 0
-  minute_run: 0
+  polling_total_time_average: "0.11"
+  polling_size_download_average: "12284.58"
+  streaming_total_time_average: "0.06"
+  streaming_size_download_average: "6168.84"
+  change_yes: "29"
+  change_no: "2251"
+  time_percentage: "44"
+  size_percentage: "50"
+  change_percentage: "1"
+  last_run: "2018-05-12"
+  days_run: "8"
+  minute_run: "0"
 ---
