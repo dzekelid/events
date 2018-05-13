@@ -27,17 +27,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/youtube/fanfundingevents-parameters.md
-- name: Youtube Get Fanfundingevents
-  description: Lists fan funding events for a channel.
+- name: Youtube Parameters Fanfundingevents
+  description: Parameters fanfundingevents
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/youtube-logo.png
   humanURL: https://www.youtube.com/
   baseURL: https://www.googleapis.com//youtube/v1
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/youtube/fanfundingevents-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/youtube/fanfundingevents-parameters.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/youtube/fanfundingevents-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/youtube/fanfundingevents-parameters-postman.md
 x-common:
 - type: x-articles
   url: https://developers.google.com/youtube/articles/
