@@ -29,17 +29,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-get.md
-- name: Meetup Events
-  description: Access Meetup events using a group, member, or event id. Events in
-    private groups are available only to authenticated members of those groups. To
-    search events by topic or location, see [Open Events](/meetup_api/docs/2/open_events).
+- name: Meetup Event Create
+  description: Create a new Meetup event within the system.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-event-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
