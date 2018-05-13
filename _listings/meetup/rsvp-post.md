@@ -1,11 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup RSVP
+  description: Creates a new Rsvp
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -23,20 +20,16 @@ paths:
       operationId: deprecated
       parameters:
       - in: query
-        name: '*event_id'
-        description: The event that you are RSVP'ing to
-        type: string
-      - in: query
-        name: '*rsvp'
-        description: The RSVP setting - value must be either "yes"
-        type: string
-      - in: query
         name: answer_{qid}
         description: Answers to event survey questions
         type: string
       - in: query
         name: comments
         description: A comment to post along with the RSVP
+        type: string
+      - in: query
+        name: event_id
+        description: The event that you are RSVP'ing to
         type: string
       - in: query
         name: guests
@@ -46,6 +39,10 @@ paths:
         name: member_id
         description: ' Organizers and event hosts may RSVP on behalf of a member by
           specifying an ID here'
+        type: string
+      - in: query
+        name: rsvp
+        description: The RSVP setting - value must be either "yes"
         type: string
       responses:
         200:
