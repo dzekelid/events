@@ -1,11 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Create Event
+  description: Creates a new Meetup group event
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -22,10 +19,6 @@ paths:
       description: Creates a new Meetup group event
       operationId: events
       parameters:
-      - in: query
-        name: '*name'
-        description: String setting the name of the event
-        type: string
       - in: query
         name: announce
         description: Boolean value indicating whether or not Meetup should announce
@@ -66,6 +59,10 @@ paths:
       - in: query
         name: lon
         description: Float representing adjusted venue longitude
+        type: string
+      - in: query
+        name: name
+        description: String setting the name of the event
         type: string
       - in: query
         name: publish_status
