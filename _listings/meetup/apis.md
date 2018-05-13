@@ -38,16 +38,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photo-comment-post.md
-- name: Meetup Venues
-  description: Search for Meetup venues by one of your groups, events, or venue identifiers.
-    For a full text search on public venues use [OpenVenues](/meetup_api/docs/2/open_venues).
+- name: Meetup Rsvps
+  description: API method for accessing meetup rsvps
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-venues-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/rsvps-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
