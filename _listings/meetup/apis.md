@@ -38,15 +38,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photo-comment-post.md
-- name: Meetup Ratings v2
-  description: API method for accessing Meetup comments
+- name: Meetup Event Rating
+  description: This method allows members to posts rating for an event after it's
+    occurred. Only permitted for members who rsvp'd yes or maybe to the event
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-event-ratings-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-event-rating-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
