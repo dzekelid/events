@@ -41,17 +41,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/github/users-username-received-events-public-get.md
-- name: Github Get Events
-  description: List public events.
+- name: Github Get Networks Owner Repo Events
+  description: List public events for a network of repositories.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/github-logo.png
   humanURL: https://github.com
   baseURL: https://api.github.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/github/events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/github/networks-owner-repo-events-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/github/events-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/github/networks-owner-repo-events-get-postman.md
 x-common:
 - type: x-net-library
   url: https://github.com/octokit/octokit.net
