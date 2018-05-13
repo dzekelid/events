@@ -59,16 +59,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/notifications-get.md
-- name: Meetup Clicked Notifications
-  description: Marks groups of [notifications](/meetup_api/docs/notifications/) as
-    clicked.
+- name: Meetup Photo Album
+  description: Gets information about a specific photo album
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/notifications-clicked-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-photo-albums-album-id-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
