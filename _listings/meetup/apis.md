@@ -47,7 +47,7 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/activity-get.md
-- name: Meetup WebSocket Photo Stream
+- name: Meetup WebSockets Event Comments Stream
   description: |-
     For browsers that support it, [WebSockets](http://dev.w3.org/html5/websockets/) is a more
     efficient alternative to the long-polling stream. This is a **push only** endpoint and will discard
@@ -61,7 +61,7 @@ apis:
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photos-ws.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-event-comments-ws.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
