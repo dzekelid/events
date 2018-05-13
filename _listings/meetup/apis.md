@@ -38,15 +38,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photo-comment-post.md
-- name: Meetup Photo Album2
-  description: This method creates photo albums within a Meetup group
+- name: Meetup OpenVenues
+  description: Searches for public venues within a given geo space. To search for
+    specific venues that your group has used, use the [Venues](/meetup_api/docs/2/venues)
+    method
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photo-album-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-open-venues-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
