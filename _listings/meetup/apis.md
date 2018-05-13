@@ -59,15 +59,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/notifications-get.md
-- name: Meetup Find Topics
-  description: Find topics by name
+- name: Meetup Group Events
+  description: Gets a listing of all Meetup Events hosted by a target group, in ascending
+    order by default
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-topics-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
