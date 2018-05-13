@@ -1,11 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Report Abuse
+  description: Submits a new abuse report for a target member. Abuse reports will
+    be followed up on by our Community Support team.
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -23,10 +21,6 @@ paths:
       operationId: abuse
       parameters:
       - in: query
-        name: '*type'
-        description: A required identifier for type of abuse you are reporting
-        type: string
-      - in: query
         name: comments
         description: An optional string of text that describes why you are submitting
           this report
@@ -39,6 +33,10 @@ paths:
       - in: query
         name: member_id
         description: A numeric identifier for the member being reported
+        type: string
+      - in: query
+        name: type
+        description: A required identifier for type of abuse you are reporting
         type: string
       - in: query
         name: url
