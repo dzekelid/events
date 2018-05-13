@@ -1,11 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Profile Create (Group Join)
+  description: This method allows an authenticated member to join a group by creating
+    a profile
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -24,16 +22,16 @@ paths:
       operationId: profiles
       parameters:
       - in: query
-        name: '*group_id'
+        name: answer_{qid}
+        description: Answers to questions from groups API join_info question fields
+        type: string
+      - in: query
+        name: group_id
         description: Id of group to join
         type: string
       - in: query
-        name: '*group_urlname'
+        name: group_urlname
         description: Urlname of group to join
-        type: string
-      - in: query
-        name: answer_{qid}
-        description: Answers to questions from groups API join_info question fields
         type: string
       - in: query
         name: intro
