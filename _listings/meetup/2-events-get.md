@@ -1,11 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Events
+  description: Access Meetup events using a group, member, or event id. Events in
+    private groups are available only to authenticated members of those groups. To
+    search events by topic or location, see [Open Events](/meetup_api/docs/2/open_events).
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -23,31 +22,7 @@ paths:
       operationId: events
       parameters:
       - in: query
-        name: '*event_id'
-        description: Multiple ids may be separated with commas
-        type: string
-      - in: query
-        name: '*group_domain'
-        description: Group custom domain
-        type: string
-      - in: query
-        name: '*group_id'
-        description: Multiple ids may be separated with commas
-        type: string
-      - in: query
-        name: '*group_urlname'
-        description: Path to group from meetup
-        type: string
-      - in: query
-        name: '*member_id'
-        description: Single member id, to find events in this member's groups
-        type: string
-      - in: query
-        name: '*rsvp'
-        description: Filters events by the currently authenticated member's RSVP status
-        type: string
-      - in: query
-        name: '*venue_id'
+        name: event_id
         description: Multiple ids may be separated with commas
         type: string
       - in: query
@@ -56,9 +31,29 @@ paths:
           in the output
         type: string
       - in: query
+        name: group_domain
+        description: Group custom domain
+        type: string
+      - in: query
+        name: group_id
+        description: Multiple ids may be separated with commas
+        type: string
+      - in: query
+        name: group_urlname
+        description: Path to group from meetup
+        type: string
+      - in: query
         name: limited_events
         description: Include limited event information for private groups that wish
           to expose only a small amount of information about their events
+        type: string
+      - in: query
+        name: member_id
+        description: Single member id, to find events in this member's groups
+        type: string
+      - in: query
+        name: rsvp
+        description: Filters events by the currently authenticated member's RSVP status
         type: string
       - in: query
         name: status
@@ -74,6 +69,10 @@ paths:
         description: Return events scheduled within the given time range, defined
           by two times separated with a single comma
         type: string
+      - in: query
+        name: venue_id
+        description: Multiple ids may be separated with commas
+        type: string
       responses:
         200:
           description: OK
@@ -82,16 +81,16 @@ paths:
 definitions: []
 x-collection-name: Meetup
 x-streamrank:
-  polling_total_time_average: 0
-  polling_size_download_average: 0
-  streaming_total_time_average: 0
-  streaming_size_download_average: 0
-  change_yes: 0
-  change_no: 0
-  time_percentage: 0
-  size_percentage: 0
-  change_percentage: 0
-  last_run: ""
-  days_run: 0
-  minute_run: 0
+  polling_total_time_average: "0.11"
+  polling_size_download_average: "1941.69"
+  streaming_total_time_average: "0.06"
+  streaming_size_download_average: "983.16"
+  change_yes: "84"
+  change_no: "1779"
+  time_percentage: "45"
+  size_percentage: "49"
+  change_percentage: "5"
+  last_run: "2018-05-12"
+  days_run: "8"
+  minute_run: "0"
 ---
