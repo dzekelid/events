@@ -47,27 +47,25 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-patch.md
-- name: Meetup Notifications
-  description: Returns all recent Meetup notifications for the authorized member.
-    To mark notifications read use [/notifications/read](/meetup_api/docs/notifications/read/)
-    endpoint. To get the authenticated Member's current unread count, request it in
-    an [HTTP header](/meetup_api/docs/#meta-headers).
+- name: Meetup Find Groups
+  description: Text, location, category and friend-based group searches
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/notifications-get.md
-- name: Meetup Recommended Events
-  description: Returns a list of upcoming recommended events
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
+- name: Meetup Recommend Group Topics
+  description: Recommends suggestions for group topics based on a text search or other
+    topics
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/recommended-events-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/recommended-group-topics-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
