@@ -56,15 +56,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
-- name: Meetup Album Photos
-  description: Lists of all photos uploaded for the group
+- name: Meetup Group Profile list
+  description: Get a list of Meetup group members
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-photos-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-members-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
