@@ -1,8 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  title: Akamai API Get an Event
-  description: Get an Event
+  title: Akamai API Get Event with its Services
+  description: Get Event with its Services
   version: 1.0.0
 host: developer.akamai.com
 basePath: /
@@ -15,9 +15,9 @@ consumes:
 paths:
   /events/v2/{accountId}/events/{eventId}:
     get:
-      summary: Get an Event
-      description: Get an Event
-      operationId: eventsv2accountideventseventid
+      summary: Get Event with its Services
+      description: Get Event with its Services
+      operationId: eventsv2accountideventseventidservices
       parameters:
       - in: query
         name: accountId
@@ -27,6 +27,10 @@ paths:
         name: eventId
         description: Unique identifier for the event
         type: string
+      - in: query
+        name: services
+        description: Value must be detail, otherwise only returns basic event details
+        type: string
       responses:
         200:
           description: OK
@@ -35,6 +39,7 @@ paths:
       - account
       - events
       - event
+      - services
 definitions: []
 x-collection-name: Akamai
 x-streamrank:
