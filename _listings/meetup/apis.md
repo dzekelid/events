@@ -47,16 +47,45 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-events-id-patch.md
-- name: Meetup Member Calendar
-  description: Get a listing of all upcoming Meetup events for the authenticated member
+- name: Meetup Find Groups
+  description: Text, location, category and friend-based group searches
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/self-calendar-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/find-groups-get.md
+- name: Meetup Member groups
+  description: |-
+    Lists the authenticated member's groups in the order of leadership,
+    next upcoming event, then alphabetical order by name
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
+  humanURL: http://www.meetup.com/
+  baseURL: https://api.meetup.com//
+  tags: Events
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/self-groups-get.md
 x-common:
+- type: x-base
+  url: http://api.meetup.com
+- type: x-developer
+  url: http://www.meetup.com/meetup_api/
+- type: x-github
+  url: https://github.com/meetup
+- type: x-pricing
+  url: http://www.meetup.com/pricing/
+- type: x-privacy
+  url: http://www.meetup.com/privacy/
+- type: x-support
+  url: http://www.meetup.com/help/
+- type: x-terms-of-service
+  url: http://www.meetup.com/terms/
+- type: x-twitter
+  url: https://twitter.com/MeetupAPI
+- type: x-website
+  url: http://www.meetup.com/
 - type: x-base
   url: http://api.meetup.com
 - type: x-developer
