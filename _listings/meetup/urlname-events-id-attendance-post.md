@@ -1,11 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Attendance Taking
+  description: Takes member attendance for an event. Limited for use by administrative
+    members.
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -23,21 +21,21 @@ paths:
       operationId: events
       parameters:
       - in: query
-        name: '*member'
-        description: A comma-delimited list of valid ids associated with members RSVP'd
-          to the event
-        type: string
-      - in: query
-        name: '*status'
-        description: An attendance status for the provided members
-        type: string
-      - in: query
         name: guests
         description: The number of guests accompanying member
         type: string
       - in: query
         name: headcount
         description: Sets the overall headcount for the event
+        type: string
+      - in: query
+        name: member
+        description: A comma-delimited list of valid ids associated with members RSVP'd
+          to the event
+        type: string
+      - in: query
+        name: status
+        description: An attendance status for the provided members
         type: string
       responses:
         200:
