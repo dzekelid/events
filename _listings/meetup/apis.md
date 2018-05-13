@@ -38,16 +38,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photo-comment-post.md
-- name: Meetup Unblock member
-  description: Unblocks a previously blocked member from various interactions with
-    the authenticated member on the platform
+- name: Meetup Membership Approval
+  description: Approves one or more requests for group membership
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/self-blocks-member-id-delete.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-member-approvals-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
