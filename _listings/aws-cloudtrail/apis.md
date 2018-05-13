@@ -32,17 +32,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudtrail/action-puteventselectors-get.md
-- name: AWS CloudTrail API Lookup Events
-  description: |-
-    Looks up API activity events captured by CloudTrail that create, update, or delete
-             resources in your account.
+- name: AWS CloudTrail API Put Event Selectors
+  description: Configures an event selector for your trail.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Management-Tools_AWSCloudTrail.png
   humanURL: https://aws.amazon.com/cloudtrail/
   baseURL: http:://{host}//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudtrail/action-lookupevents-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudtrail/action-puteventselectors-get.md
 x-common:
 - type: x-console
   url: https://console.aws.amazon.com/cloudtrail/home
