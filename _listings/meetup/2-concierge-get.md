@@ -1,11 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: Meetup
-  description: 'The Meetup API provides simple RESTful HTTP and streaming interfaces
-    for exploring and interacting Meetup platform from your own apps. The API is a
-    set of core methods and a common request format. These are combined to form a
-    URL that returns the information you want. '
+  title: Meetup Concierge
+  description: Recommends upcoming meetups for the authorized member in a given location
+    and in thier groups
   version: 1.0.0
 host: api.meetup.com
 basePath: /
@@ -100,16 +98,16 @@ paths:
 definitions: []
 x-collection-name: Meetup
 x-streamrank:
-  polling_total_time_average: 0
-  polling_size_download_average: 0
-  streaming_total_time_average: 0
-  streaming_size_download_average: 0
-  change_yes: 0
-  change_no: 0
-  time_percentage: 0
-  size_percentage: 0
-  change_percentage: 0
-  last_run: ""
-  days_run: 0
-  minute_run: 0
+  polling_total_time_average: "0.46"
+  polling_size_download_average: "54949.14"
+  streaming_total_time_average: "0.25"
+  streaming_size_download_average: "27825.76"
+  change_yes: "1040"
+  change_no: "1247"
+  time_percentage: "46"
+  size_percentage: "49"
+  change_percentage: "45"
+  last_run: "2018-05-12"
+  days_run: "8"
+  minute_run: "0"
 ---
