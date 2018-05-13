@@ -38,16 +38,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/2-photo-comment-post.md
-- name: Meetup Report Abuse
-  description: Submits a new abuse report for a target member. Abuse reports will
-    be followed up on by our Community Support team.
+- name: Meetup Report Group
+  description: Submits a new abuse report for a target group. Abuse reports will be
+    followed up on by our Community Support team.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Events
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/self-abuse-reports-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/meetup/urlname-abuse-reports-post.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
