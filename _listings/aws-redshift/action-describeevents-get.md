@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Redshift API
+  title: Amazon Redshift API Describe Events
   version: 1.0.0
+  description: |-
+    Returns events related to clusters, security groups, snapshots, and parameter
+                groups for the past 14 days.
 schemes:
 - http
 produces:
