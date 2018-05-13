@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: Akamai Merged API
+  title: Akamai API List Events in Progress
+  description: List Events in Progress
   version: 1.0.0
+host: developer.akamai.com
+basePath: /
 schemes:
 - http
 produces:
@@ -16,7 +19,7 @@ paths:
       description: List Events in Progress
       operationId: eventsv2accountideventslive
       parameters:
-      - in: String
+      - in: query
         name: accountId
         description: Unique identifier for the account
         type: string
