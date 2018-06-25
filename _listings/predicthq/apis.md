@@ -3,12 +3,12 @@ name: PredictHQ
 x-slug: predicthq
 description: Event visibility yields higher returns & reduces operational costs. PredictHQ
   is the worlds largest source of intelligent event data making businesses smarter.
-image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-developer-predicthq-com.jpg
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-predicthq.jpg
 x-kinRank: "7"
-x-alexaRank: "428389"
+x-alexaRank: "292227"
 tags: Events
-created: "2018-06-18"
-modified: "2018-06-18"
+created: "2018-06-25"
+modified: "2018-06-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/predicthq/apis.md
 specificationVersion: "0.14"
 apis:
@@ -18,7 +18,7 @@ apis:
     This endpoint accepts the same parameters as the ones described in Retrieve All Events and can be used to get a calendar view of all matching events that are available to your account.
 
     Each day in the calendar contains aggregate counts of all _active_ events for that day.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-developer-predicthq-com.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-predicthq.jpg
   humanURL: http://www.predicthq.com/
   baseURL: https://api.predicthq.com////v1/events/calendar/
   tags: Events,Calendar
@@ -32,7 +32,7 @@ apis:
   description: This endpoint accepts the same parameters as the ones described in
     Retrieve All Events and can be used to get aggregated counts of all matching events
     that are available to your account.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-developer-predicthq-com.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-predicthq.jpg
   humanURL: http://www.predicthq.com/
   baseURL: https://api.predicthq.com////v1/events/count/
   tags: Events,Count
@@ -45,7 +45,7 @@ apis:
   x-api-slug: predicthq
   description: Use the below parameters to search and filter all events that are available
     to your account.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-developer-predicthq-com.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-predicthq.jpg
   humanURL: http://www.predicthq.com/
   baseURL: https://api.predicthq.com////v1/events/
   tags: Events
@@ -59,7 +59,7 @@ apis:
   description: Event visibility yields higher returns & reduces operational costs.
     PredictHQ is the worlds largest source of intelligent event data making businesses
     smarter.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-developer-predicthq-com.jpg
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28211-predicthq.jpg
   humanURL: http://www.predicthq.com/
   baseURL: https://api.predicthq.com//
   tags: Events
@@ -79,6 +79,8 @@ x-common:
   url: notices@predicthq.com
 - type: x-github
   url: https://github.com/predicthq
+- type: x-linkedin
+  url: PredictHQ
 - type: x-twitter
   url: https://twitter.com/PredictHQ
 - type: x-website
