@@ -7,77 +7,123 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursq
 x-kinRank: "9"
 x-alexaRank: "2544"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Foursquare Get Events Categories
-  x-api-slug: foursquare
+- name: Foursquare - Get Events Categories
+  x-api-slug: eventscategories-get
   description: /events/{EVENT_ID}
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursquare.jpg
   humanURL: http://blog.foursquare.com
-  baseURL: https://api.foursquare.com//v2///events/categories
-  tags: Events,Categories
+  baseURL: https://api.foursquare.com//v2/
+  tags: Games, Mobile, Social, Coupons, Deals, Local, Merchants, Places, Stack Network,
+    Stack, Getting Started Example, Technology, internet, API Provider, Checkins,
+    Profiles, General Data, Relative Data, Pedestal, Locations, Locations, Historical
+    Data API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventscategories-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventscategories-get-openapi.md
-- name: Foursquare Get Events Search
-  x-api-slug: foursquare
+- name: Foursquare - Get Events Search
+  x-api-slug: eventssearch-get
   description: /events/categories
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursquare.jpg
   humanURL: http://blog.foursquare.com
-  baseURL: https://api.foursquare.com//v2///events/search
-  tags: Events,Search
+  baseURL: https://api.foursquare.com//v2/
+  tags: Games, Mobile, Social, Coupons, Deals, Local, Merchants, Places, Stack Network,
+    Stack, Getting Started Example, Technology, internet, API Provider, Checkins,
+    Profiles, General Data, Relative Data, Pedestal, Locations, Locations, Historical
+    Data API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventssearch-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventssearch-get-openapi.md
-- name: Foursquare Get Events Event
-  x-api-slug: foursquare
+- name: Foursquare - Get Events Event
+  x-api-slug: eventsevent-id-get
   description: /campaigns/{CAMPAIGN_ID}/start
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursquare.jpg
   humanURL: http://blog.foursquare.com
-  baseURL: https://api.foursquare.com//v2///events/{EVENT_ID}
-  tags: Events,Event
+  baseURL: https://api.foursquare.com//v2/
+  tags: Games, Mobile, Social, Coupons, Deals, Local, Merchants, Places, Stack Network,
+    Stack, Getting Started Example, Technology, internet, API Provider, Checkins,
+    Profiles, General Data, Relative Data, Pedestal, Locations, Locations, Historical
+    Data API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-openapi.md
-- name: Foursquare Get Venues Events
-  x-api-slug: foursquare
+- name: Foursquare - Get Venues Events
+  x-api-slug: venuesvenue-idevents-get
   description: /venues/trending
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursquare.jpg
   humanURL: http://blog.foursquare.com
-  baseURL: https://api.foursquare.com//v2///venues/{VENUE_ID}/events
-  tags: Venues,Events
+  baseURL: https://api.foursquare.com//v2/
+  tags: Games, Mobile, Social, Coupons, Deals, Local, Merchants, Places, Stack Network,
+    Stack, Getting Started Example, Technology, internet, API Provider, Checkins,
+    Profiles, General Data, Relative Data, Pedestal, Locations, Locations, Historical
+    Data API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/venuesvenue-idevents-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/venuesvenue-idevents-get-openapi.md
-- name: Foursquare
-  x-api-slug: foursquare
-  description: foursquare makes the real world easier to use. We build tools that
-    help you keep up with friends, discover whats nearby, save money and unlock deals.
-    Whether youre setting off on a trip around the world, coordinating a night out
-    with friends, or trying to pick out the best dish at your local restaurant, foursquare
-    is the perfect companion. The foursquare API gives you access to all of the data
-    used by the foursquare mobile applications, and, in some cases, even more.
+- name: Foursquare - Get Events Event
+  x-api-slug: eventsevent-id-get
+  description: /campaigns/{CAMPAIGN_ID}/start
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursquare.jpg
   humanURL: http://blog.foursquare.com
   baseURL: https://api.foursquare.com//v2/
-  tags: Events
+  tags: Games, Mobile, Social, Coupons, Deals, Local, Merchants, Places, Stack Network,
+    Stack, Getting Started Example, Technology, internet, API Provider, Checkins,
+    Profiles, General Data, Relative Data, Pedestal, Locations, Locations, Historical
+    Data API
   properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-postman.md
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-openapi.md
+- name: Foursquare - Get Events Event
+  x-api-slug: eventsevent-id-get
+  description: /campaigns/{CAMPAIGN_ID}/start
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursquare.jpg
+  humanURL: http://blog.foursquare.com
+  baseURL: https://api.foursquare.com//v2/
+  tags: Games, Mobile, Social, Coupons, Deals, Local, Merchants, Places, Stack Network,
+    Stack, Getting Started Example, Technology, internet, API Provider, Checkins,
+    Profiles, General Data, Relative Data, Pedestal, Locations, Locations, Historical
+    Data API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-openapi.md
+- name: Foursquare - Get Events Event
+  x-api-slug: eventsevent-id-get
+  description: /campaigns/{CAMPAIGN_ID}/start
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/203-foursquare.jpg
+  humanURL: http://blog.foursquare.com
+  baseURL: https://api.foursquare.com//v2/
+  tags: Games, Mobile, Social, Coupons, Deals, Local, Merchants, Places, Stack Network,
+    Stack, Getting Started Example, Technology, internet, API Provider, Checkins,
+    Profiles, General Data, Relative Data, Pedestal, Locations, Locations, Historical
+    Data API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/foursquare/eventsevent-id-get-openapi.md
 x-common:
 - type: x-api-json--authoritative
   url: http://apis.io/apisdef/legacy/foursquare.json
+- type: x-api-gallery
+  url: http://fluxiom.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://foursquare.stack.network
 - type: x-apigee-console
   url: https://api.apigee.com/v1/consoles/foursquare/apidescription?format=internal&ver=1393644831000
 - type: x-application-management

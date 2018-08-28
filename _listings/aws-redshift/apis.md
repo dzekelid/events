@@ -30,6 +30,178 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeevents-get-openapi.md
+- name: AWS Redshift API - Create Event Subscription
+  x-api-slug: actioncreateeventsubscription-get
+  description: Creates an Amazon Redshift event notification subscription.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actioncreateeventsubscription-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actioncreateeventsubscription-get-openapi.md
+- name: AWS Redshift API - Delete Event Subscription
+  x-api-slug: actiondeleteeventsubscription-get
+  description: Deletes an Amazon Redshift event notification subscription.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondeleteeventsubscription-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondeleteeventsubscription-get-openapi.md
+- name: AWS Redshift API - Describe Event Categories
+  x-api-slug: actiondescribeeventcategories-get
+  description: |-
+    Displays a list of event categories for all event source types, or for a specified
+                source type.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeeventcategories-get-openapi.md
+- name: AWS Redshift API - Describe Events
+  x-api-slug: actiondescribeevents-get
+  description: |-
+    Returns events related to clusters, security groups, snapshots, and parameter
+                groups for the past 14 days.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeevents-get-openapi.md
+- name: AWS Redshift API - Describe Event Subscriptions
+  x-api-slug: actiondescribeeventsubscriptions-get
+  description: |-
+    Lists descriptions of all the Amazon Redshift event notifications subscription for a
+                customer account.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeeventsubscriptions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeeventsubscriptions-get-openapi.md
+- name: AWS Redshift API - Modify Event Subscription
+  x-api-slug: actionmodifyeventsubscription-get
+  description: Modifies an existing Amazon Redshift event notification subscription.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actionmodifyeventsubscription-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actionmodifyeventsubscription-get-openapi.md
+- name: AWS Redshift API - Create Event Subscription
+  x-api-slug: actioncreateeventsubscription-get
+  description: Creates an Amazon Redshift event notification subscription.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actioncreateeventsubscription-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actioncreateeventsubscription-get-openapi.md
+- name: AWS Redshift API - Delete Event Subscription
+  x-api-slug: actiondeleteeventsubscription-get
+  description: Deletes an Amazon Redshift event notification subscription.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondeleteeventsubscription-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondeleteeventsubscription-get-openapi.md
+- name: AWS Redshift API - Describe Event Categories
+  x-api-slug: actiondescribeeventcategories-get
+  description: |-
+    Displays a list of event categories for all event source types, or for a specified
+                source type.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeeventcategories-get-openapi.md
+- name: AWS Redshift API - Describe Events
+  x-api-slug: actiondescribeevents-get
+  description: |-
+    Returns events related to clusters, security groups, snapshots, and parameter
+                groups for the past 14 days.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeevents-get-openapi.md
+- name: AWS Redshift API - Describe Event Subscriptions
+  x-api-slug: actiondescribeeventsubscriptions-get
+  description: |-
+    Lists descriptions of all the Amazon Redshift event notifications subscription for a
+                customer account.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeeventsubscriptions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeeventsubscriptions-get-openapi.md
+- name: AWS Redshift API - Modify Event Subscription
+  x-api-slug: actionmodifyeventsubscription-get
+  description: Modifies an existing Amazon Redshift event notification subscription.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
+  humanURL: https://aws.amazon.com/redshift/
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actionmodifyeventsubscription-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actionmodifyeventsubscription-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://aws.rds.api.gallery.streamdata.io

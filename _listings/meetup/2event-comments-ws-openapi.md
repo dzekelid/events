@@ -2293,6 +2293,2644 @@ paths:
       - Events
       - oEmbed
       - Media
+  /status:
+    get:
+      summary: API Status
+      description: Returns the current API service status
+      operationId: meta
+      x-api-path-slug: status-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Status
+  /self/blocks/:member_id:
+    get:
+      summary: Block status
+      description: Checks the block status for a target member relative to the authenticated
+        member
+      operationId: abuse
+      x-api-path-slug: selfblocksmember-id-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Abuse
+      - Status
+    post:
+      summary: Block member
+      description: Blocks a target member from various interactions with the authenticated
+        member on the platform
+      operationId: abuse
+      x-api-path-slug: selfblocksmember-id-post
+      parameters:
+      - in: query
+        name: comments
+        description: An optional string of text describing why you have chosen to
+          block this member
+        type: string
+      - in: query
+        name: report
+        description: An optional value that represents a type of abuse the target
+          member is being blocked for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Abuse
+      - Members
+    delete:
+      summary: Unblock member
+      description: Unblocks a previously blocked member from various interactions
+        with the authenticated member on the platform
+      operationId: abuse
+      x-api-path-slug: selfblocksmember-id-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Abuse
+      - Members
+  /self/abuse_reports:
+    post:
+      summary: Report Abuse
+      description: Submits a new abuse report for a target member. Abuse reports will
+        be followed up on by our Community Support team.
+      operationId: abuse
+      x-api-path-slug: selfabuse-reports-post
+      parameters:
+      - in: query
+        name: comments
+        description: An optional string of text that describes why you are submitting
+          this report
+        type: string
+      - in: query
+        name: content_tag
+        description: An optional identifier for flagged content that identifies both
+          the type and id, where possible, of the content reported
+        type: string
+      - in: query
+        name: member_id
+        description: A numeric identifier for the member being reported
+        type: string
+      - in: query
+        name: type
+        description: A required identifier for type of abuse you are reporting
+        type: string
+      - in: query
+        name: url
+        description: An optional URL for the location of the reported content if one
+          exists
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Abuse
+  /:urlname/abuse_reports:
+    post:
+      summary: Report Group
+      description: Submits a new abuse report for a target group. Abuse reports will
+        be followed up on by our Community Support team.
+      operationId: abuse
+      x-api-path-slug: urlnameabuse-reports-post
+      parameters:
+      - in: query
+        name: type
+        description: A required identifier for type of abuse you are reporting
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+  /:urlname/member/approvals:
+    post:
+      summary: Membership Approval
+      description: Approves one or more requests for group membership
+      operationId: profiles
+      x-api-path-slug: urlnamememberapprovals-post
+      parameters:
+      - in: query
+        name: member
+        description: Comma-delimited numeric pending member IDs
+        type: string
+      - in: query
+        name: send_copy
+        description: Optional boolean value indicating whether or not the org should
+          receive a copy of the message sent to the approved members
+        type: string
+      - in: query
+        name: welcome_message
+        description: Optional message to send to the members being approved
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Members
+    delete:
+      summary: Membership Decline
+      description: Declines one or more requests for group membership
+      operationId: profiles
+      x-api-path-slug: urlnamememberapprovals-delete
+      parameters:
+      - in: query
+        name: anon
+        description: Optional Boolean value indicating whether the declining members
+          email address should be hidden in the resulting response
+        type: string
+      - in: query
+        name: ban
+        description: Optional Boolean value indicating whether or not to ban the member
+          in the future
+        type: string
+      - in: query
+        name: explanation
+        description: Optional explanation to send to the members being declined
+        type: string
+      - in: query
+        name: member
+        description: Comma-delimited numeric pending member IDs
+        type: string
+      - in: query
+        name: send_copy
+        description: Optional Boolean value indicating whether or not to send a copy
+          to the member issuing the decline
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Members
+  /:urlname/events/:id/attendance:
+    get:
+      summary: Attendance
+      description: Lists attendance records for Meetup events. Limited for use by
+        administrative members.
+      operationId: events
+      x-api-path-slug: urlnameeventsidattendance-get
+      parameters:
+      - in: query
+        name: filter
+        description: A named filter to apply to the attendance list
+        type: string
+      - in: query
+        name: member
+        description: Raw text used to search for member by name
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Attendance
+    post:
+      summary: Attendance Taking
+      description: Takes member attendance for an event. Limited for use by administrative
+        members.
+      operationId: events
+      x-api-path-slug: urlnameeventsidattendance-post
+      parameters:
+      - in: query
+        name: guests
+        description: The number of guests accompanying member
+        type: string
+      - in: query
+        name: headcount
+        description: Sets the overall headcount for the event
+        type: string
+      - in: query
+        name: member
+        description: A comma-delimited list of valid ids associated with members RSVPd
+          to the event
+        type: string
+      - in: query
+        name: status
+        description: An attendance status for the provided members
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Attendance
+  /batch:
+    post:
+      summary: batch
+      description: Performs multiple API requests in batch, useful for reducing HTTP
+        network requests. This method is only available for OAuth authentication
+      operationId: batch
+      x-api-path-slug: batch-post
+      parameters:
+      - in: query
+        name: requests
+        description: JSON-encoding of multiple request objects as described in the
+          parameter notes
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Batch
+  /:urlname/boards:
+    get:
+      summary: Discussion Boards
+      description: Listings of Group discussion boards
+      operationId: boards
+      x-api-path-slug: urlnameboards-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Discussions
+  /:urlname/venues:
+    get:
+      summary: Group Venues
+      description: Returns venues a group has previously hosted events at
+      operationId: venues
+      x-api-path-slug: urlnamevenues-get
+      parameters:
+      - in: query
+        name: fields
+        description: Comma-delimited list of optional fields to append to the response
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+      - Veues
+    post:
+      summary: Venue Create
+      description: Interface for creating new Meetup venues
+      operationId: venues
+      x-api-path-slug: urlnamevenues-post
+      parameters:
+      - in: query
+        name: address_1
+        description: Primary address of the venue
+        type: string
+      - in: query
+        name: address_2
+        description: Secondary address info
+        type: string
+      - in: query
+        name: city
+        description: City name of the venue
+        type: string
+      - in: query
+        name: country
+        description: 2 character country code of the venue
+        type: string
+      - in: query
+        name: fields
+        description: Comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: hours
+        description: Open hours information about the venue
+        type: string
+      - in: query
+        name: name
+        description: Unique name of the venue
+        type: string
+      - in: query
+        name: phone
+        description: Optional phone number for the venue
+        type: string
+      - in: query
+        name: state
+        description: If in the US or CA, the state code for the venue
+        type: string
+      - in: query
+        name: visibility
+        description: Optional value indicating the venues visibility to others
+        type: string
+      - in: query
+        name: web_url
+        description: Optional web url for the venue
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+      - Veues
+  /:urlname/boards/:bid/discussions:
+    get:
+      summary: Discussions
+      description: Listings of group discussions
+      operationId: boards
+      x-api-path-slug: urlnameboardsbiddiscussions-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Discussions
+  /:urlname/boards/:bid/discussions/:did:
+    get:
+      summary: Discussion Posts
+      description: Listing Group discussion posts
+      operationId: boards
+      x-api-path-slug: urlnameboardsbiddiscussionsdid-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Discussions
+  /self/events:
+    get:
+      summary: Member Events
+      description: |-
+        Gets a listing of all scheduled Meetup Events the authenticated member has RSVP'd to
+        that have been announced to the group.
+        This listing is ordered from oldest to most recent by default
+      operationId: events
+      x-api-path-slug: selfevents-get
+      parameters:
+      - in: query
+        name: desc
+        description: When true, sorts results in descending order
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields names which may be
+          appended to the response
+        type: string
+      - in: query
+        name: page
+        description: Number of results to return
+        type: string
+      - in: query
+        name: rsvp
+        description: Comma-delimited list of RSVP responses
+        type: string
+      - in: query
+        name: scroll
+        description: A string representing an alias for a point on a timeline
+        type: string
+      - in: query
+        name: status
+        description: Comma-delimited list of event statuses
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Members
+  /:urlname/events:
+    post:
+      summary: Create Event
+      description: Creates a new Meetup group event
+      operationId: events
+      x-api-path-slug: urlnameevents-post
+      parameters:
+      - in: query
+        name: announce
+        description: Boolean value indicating whether or not Meetup should announce
+          this event to group members
+        type: string
+      - in: query
+        name: description
+        description: String setting the description of the event, in simple HTML format
+        type: string
+      - in: query
+        name: duration
+        description: Positive long representing event duration in milliseconds
+        type: string
+      - in: query
+        name: event_hosts
+        description: String containing up to 5 comma-separated valid member ids for
+          members who will be hosts of the event
+        type: string
+      - in: query
+        name: featured_photo_id
+        description: Positive integer representing a numeric identifier for a photo,
+          which must be one associated with this group
+        type: string
+      - in: query
+        name: guest_limit
+        description: Positive integer representing the number of guests that members
+          may include in their RSVP, 0 inclusive
+        type: string
+      - in: query
+        name: how_to_find_us
+        description: String setting the description for the location of the host(s)
+          at the event venue
+        type: string
+      - in: query
+        name: lat
+        description: Float representing adjusted venue latitude
+        type: string
+      - in: query
+        name: lon
+        description: Float representing adjusted venue longitude
+        type: string
+      - in: query
+        name: name
+        description: String setting the name of the event
+        type: string
+      - in: query
+        name: publish_status
+        description: String indicating whether an event will be published to the group
+          or as a draft visible only to the leadership team
+        type: string
+      - in: query
+        name: question
+        description: String setting the RSVP survey question for the event
+        type: string
+      - in: query
+        name: rsvp_close_time
+        description: Positive long representing the time before which members will
+          be allowed to RSVP to the event in milliseconds since the epoch
+        type: string
+      - in: query
+        name: rsvp_limit
+        description: Positive integer representing total number of RSVP slots available
+          for the event
+        type: string
+      - in: query
+        name: rsvp_open_time
+        description: Positive long representing the time after which members will
+          be allowed to RSVP to the event in milliseconds since the epoch
+        type: string
+      - in: query
+        name: self_rsvp
+        description: Boolean value indicating whether the authenticated member will
+          be RSVPd to the event upon creation
+        type: string
+      - in: query
+        name: time
+        description: Positive long representing event start time in milliseconds since
+          the epoch
+        type: string
+      - in: query
+        name: venue_id
+        description: Positive integer representing a numeric identifier for a venue
+        type: string
+      - in: query
+        name: venue_visibility
+        description: String indicating whether the event venue and host location description
+          will be visible to non-members of the hosting group
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+    get:
+      summary: Group Events
+      description: Gets a listing of all Meetup Events hosted by a target group, in
+        ascending order by default
+      operationId: events
+      x-api-path-slug: urlnameevents-get
+      parameters:
+      - in: query
+        name: desc
+        description: When true, sorts results in descending order
+        type: string
+      - in: query
+        name: fields
+        description: Comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: page
+        description: Number of results to return in a page
+        type: string
+      - in: query
+        name: scroll
+        description: A string representing an alias for a point on a timeline
+        type: string
+      - in: query
+        name: status
+        description: A comma-delimited list of event statuses
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+  /:urlname/events/:id:
+    patch:
+      summary: Update Event
+      description: Updates an existing Meetup group event's details
+      operationId: events
+      x-api-path-slug: urlnameeventsid-patch
+      parameters:
+      - in: query
+        name: announce
+        description: Boolean value indicating whether or not Meetup should announce
+          this event to group members
+        type: string
+      - in: query
+        name: description
+        description: String setting the description of the event, in simple HTML format
+        type: string
+      - in: query
+        name: duration
+        description: Positive long representing event duration in milliseconds
+        type: string
+      - in: query
+        name: event_hosts
+        description: String containing up to 5 comma-separated valid member ids for
+          members who will be hosts of the event
+        type: string
+      - in: query
+        name: featured_photo_id
+        description: Positive integer representing a numeric identifier for a photo,
+          which must be one associated with this group
+        type: string
+      - in: query
+        name: guest_limit
+        description: Positive integer representing the number of guests that members
+          may include in their RSVP, 0 inclusive
+        type: string
+      - in: query
+        name: how_to_find_us
+        description: String setting the description for the location of the host(s)
+          at the event venue
+        type: string
+      - in: query
+        name: lat
+        description: Float representing adjusted venue latitude
+        type: string
+      - in: query
+        name: lon
+        description: Float representing adjusted venue longitude
+        type: string
+      - in: query
+        name: name
+        description: String setting the name of the event
+        type: string
+      - in: query
+        name: publish_status
+        description: String indicating whether an event will be published to the group
+          or as a draft visible only to the leadership team
+        type: string
+      - in: query
+        name: question
+        description: String setting or replacing the RSVP survey question for the
+          event
+        type: string
+      - in: query
+        name: rsvp_close_time
+        description: Positive long representing the time before which members will
+          be allowed to RSVP to the event in milliseconds since the epoch
+        type: string
+      - in: query
+        name: rsvp_limit
+        description: Positive integer representing total number of RSVP slots available
+          for the event
+        type: string
+      - in: query
+        name: rsvp_open_time
+        description: Positive long representing the time after which members will
+          be allowed to RSVP to the event in milliseconds since the epoch
+        type: string
+      - in: query
+        name: time
+        description: Positive long representing event start time in milliseconds since
+          the epoch
+        type: string
+      - in: query
+        name: venue_id
+        description: Positive integer representing a numeric identifier for a venue
+        type: string
+      - in: query
+        name: venue_visibility
+        description: String indicating whether the event venue and host location description
+          will be visible to non-members of the hosting group
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+    delete:
+      summary: Event Delete
+      description: Cancels or removes an event from a groups calendar
+      operationId: events
+      x-api-path-slug: urlnameeventsid-delete
+      parameters:
+      - in: query
+        name: remove_from_calendar
+        description: Optional boolean parameter that, when set to true, fully deletes
+          the event
+        type: string
+      - in: query
+        name: update_series
+        description: Optional boolean parameter that, when set to true, will update
+          all future recurrences of this event if this event belongs to an event series
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+    get:
+      summary: Get Event
+      description: Fetches a Meetup Event by group urlname and event_id
+      operationId: events
+      x-api-path-slug: urlnameeventsid-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+  /:urlname/events/:event_id/rsvps/open:
+    post:
+      summary: Open Rsvps
+      description: Opens rsvps for an event
+      operationId: events
+      x-api-path-slug: urlnameeventsevent-idrsvpsopen-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - RSVP
+  /:urlname/events/:event_id/rsvps/close:
+    post:
+      summary: Close Rsvps
+      description: Closes rsvps for an event
+      operationId: events
+      x-api-path-slug: urlnameeventsevent-idrsvpsclose-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - RSVP
+  /:urlname/events/:event_id/hosts:
+    get:
+      summary: Event Hosts
+      description: Returns the list of hosts for a given event
+      operationId: hosts
+      x-api-path-slug: urlnameeventsevent-idhosts-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /:urlname/events/:event_id/comments:
+    get:
+      summary: Event Comments List
+      description: |-
+        Lists the comments and replies posted in a given Meetup Event.
+
+        To view the list of likes for a comment or reply
+        see the [likes](/meetup_api/docs/:urlname/events/:event_id/comments/:comment_id/likes/)
+        endpoint
+      operationId: comments
+      x-api-path-slug: urlnameeventsevent-idcomments-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Comments
+    post:
+      summary: Event comment and reply
+      description: Creates new comments and replies to existing comments within an
+        Meetup event
+      operationId: comments
+      x-api-path-slug: urlnameeventsevent-idcomments-post
+      parameters:
+      - in: query
+        name: comment
+        description: The text of the comment in at most 1024 characters
+        type: string
+      - in: query
+        name: in_reply_to
+        description: If posting a reply, set this to the numeric identifier of the
+          associated top level comment
+        type: string
+      - in: query
+        name: notifications
+        description: A boolean value indicating whether or not you wish to recieve
+          future notifications about updates to this comment thread
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Comments
+  /:urlname/events/:event_id/comments/:comment_id:
+    delete:
+      summary: Event comment delete
+      description: Deletes comments posted in events
+      operationId: comments
+      x-api-path-slug: urlnameeventsevent-idcommentscomment-id-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Comments
+  /:urlname/events/:id/payments:
+    post:
+      summary: Event Payments
+      description: Allows organizers of a group to note payments made by members for
+        an event. This is the 'Mark Paid' feature seen in the RSVP listings on event
+        details pages and affects the 'pay_status' response fields in [2/rsvps](/meetup_api/docs/2/rsvps/#response)
+        for paid events
+      operationId: events
+      x-api-path-slug: urlnameeventsidpayments-post
+      parameters:
+      - in: query
+        name: amount
+        description: The monetary amount of money the member submitted
+        type: string
+      - in: query
+        name: member
+        description: Member Id of member who made a payment
+        type: string
+      - in: query
+        name: paid_on
+        description: The time the payment was made in milliseconds from the epoc
+        type: string
+      - in: query
+        name: quantity
+        description: The number of payments made
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Payments
+  /:urlname/photo_albums/:album_id/photos:
+    get:
+      summary: Album Photos
+      description: Lists photos for a given photo album
+      operationId: photos
+      x-api-path-slug: urlnamephoto-albumsalbum-idphotos-get
+      parameters:
+      - in: query
+        name: desc
+        description: Controls directional order or listing
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      - in: query
+        name: page
+        description: Number of items to return per-page of results
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+    post:
+      summary: Album Photo Upload
+      description: Support for uploading new Album photos
+      operationId: photos
+      x-api-path-slug: urlnamephoto-albumsalbum-idphotos-post
+      parameters:
+      - in: query
+        name: await
+        description: Optional boolean parameter that will defer a requests a response
+          until confirmation that photo is immediately displayable is received
+        type: string
+      - in: query
+        name: caption
+        description: Caption for display
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      - in: query
+        name: photo
+        description: Photo upload data, encoded as multipart/form-data
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /:urlname/events/:event_id/photos:
+    get:
+      summary: Event Photos
+      description: Lists photos for a given event
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotos-get
+      parameters:
+      - in: query
+        name: desc
+        description: Controls directional order or listing
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      - in: query
+        name: page
+        description: Number of items to return per-page of results
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+    post:
+      summary: Event Photo Upload
+      description: Support for uploading new Event photos
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotos-post
+      parameters:
+      - in: query
+        name: await
+        description: Optional boolean parameter that will defer a requests a response
+          until confirmation that photo is immediately displayable is received
+        type: string
+      - in: query
+        name: caption
+        description: Caption for display
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      - in: query
+        name: photo
+        description: Photo upload data, encoded as multipart/form-data
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /:urlname/events/:event_id/photos/:photo_id:
+    get:
+      summary: Event Photo
+      description: Gets information about a specific photo
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotosphoto-id-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+    patch:
+      summary: Event Photo Edit
+      description: Edits photo details
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotosphoto-id-patch
+      parameters:
+      - in: query
+        name: caption
+        description: The photo caption
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+    delete:
+      summary: Event Photo Delete
+      description: Deletes a specified event photo
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotosphoto-id-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /find/events:
+    get:
+      summary: Find Events
+      description: Returns list of upcoming events based on location
+      operationId: deprecated
+      x-api-path-slug: findevents-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to populate in the
+          response
+        type: string
+      - in: query
+        name: lat
+        description: Approximate target latitude
+        type: string
+      - in: query
+        name: lon
+        description: Approximate target longitude
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: text
+        description: Raw full text search query
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+  /find/upcoming_events:
+    get:
+      summary: Find Upcoming Events
+      description: Returns a list of upcoming events
+      operationId: events
+      x-api-path-slug: findupcoming-events-get
+      parameters:
+      - in: query
+        name: end_date_range
+        description: Return events that start before this date
+        type: string
+      - in: query
+        name: end_time_range
+        description: Return events that start before this time
+        type: string
+      - in: query
+        name: excluded_groups
+        description: IDs for groups to exclude from the returned events
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to populate in the
+          response
+        type: string
+      - in: query
+        name: lat
+        description: Approximate target latitude
+        type: string
+      - in: query
+        name: lon
+        description: Approximate target longitude
+        type: string
+      - in: query
+        name: order
+        description: The sort order of returned events
+        type: string
+      - in: query
+        name: page
+        description: A target minimum number of events to return in a single page
+          of results
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: self_groups
+        description: set to include or exclude or only get groups that the member
+          belongs to
+        type: string
+      - in: query
+        name: start_date_range
+        description: Return events that start after this date
+        type: string
+      - in: query
+        name: start_time_range
+        description: Return events that start after this time
+        type: string
+      - in: query
+        name: text
+        description: Full text search query
+        type: string
+      - in: query
+        name: topic_category
+        description: Numeric topic category identifier for filtering recommendations
+          by a topic category
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+  /find/groups:
+    get:
+      summary: Find Groups
+      description: Text, location, category and friend-based group searches
+      operationId: groups
+      x-api-path-slug: findgroups-get
+      parameters:
+      - in: query
+        name: category
+        description: Comma-delimited list of numeric category ids
+        type: string
+      - in: query
+        name: country
+        description: A valid two character country code, defaults to US
+        type: string
+      - in: query
+        name: fallback_suggestions
+        description: boolean indicator of whether or not to return a list of curated
+          suggestions for groups if we cant find groups matching your criteria
+        type: string
+      - in: query
+        name: fields
+        description: Request that additional fields (separated by commas) be included
+          in the output
+        type: string
+      - in: query
+        name: filter
+        description: Determines which groups are returned
+        type: string
+      - in: query
+        name: lat
+        description: Approximate latitude
+        type: string
+      - in: query
+        name: location
+        description: Raw text location query
+        type: string
+      - in: query
+        name: lon
+        description: Approximate longitude
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: self_groups
+        description: set to include or exclude Meetups the authorized member belongs
+          to; default is include
+        type: string
+      - in: query
+        name: text
+        description: Raw full text search query
+        type: string
+      - in: query
+        name: topic_id
+        description: Comma-delimited list of numeric topic ids
+        type: string
+      - in: query
+        name: upcoming_events
+        description: If true, filters text and category based searches on groups that
+          have upcoming events
+        type: string
+      - in: query
+        name: zip
+        description: Zipcode of location to limit search to
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+      - Groups
+  /find/venues:
+    get:
+      summary: Find Venues
+      description: Returns list of venues based on location
+      operationId: venues
+      x-api-path-slug: findvenues-get
+      parameters:
+      - in: query
+        name: country
+        description: A valid two charater country code, desfaults to US
+        type: string
+      - in: query
+        name: desc
+        description: Boolean value to indicate to direction ordered results
+        type: string
+      - in: query
+        name: fields
+        description: Comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: lat
+        description: Approximate latitude
+        type: string
+      - in: query
+        name: location
+        description: Raw text location query
+        type: string
+      - in: query
+        name: lon
+        description: Approximate longitude
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: text
+        description: Raw full text search query
+        type: string
+      - in: query
+        name: zip
+        description: Zipcode of location to limit search to
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+      - Venues
+  /:urlname/photos:
+    get:
+      summary: Album Photos
+      description: Lists of all photos uploaded for the group
+      operationId: photos
+      x-api-path-slug: urlnamephotos-get
+      parameters:
+      - in: query
+        name: desc
+        description: Controls directional order or listing
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      - in: query
+        name: page
+        description: Number of items to return per-page of results
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /:urlname/members:
+    get:
+      summary: Group Profile list
+      description: Get a list of Meetup group members
+      operationId: profiles
+      x-api-path-slug: urlnamemembers-get
+      parameters:
+      - in: query
+        name: desc
+        description: Boolean value controling sort order of results
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: filter
+        description: May be set to stepup_eligible to return only members eligible
+          to step up as organizer
+        type: string
+      - in: query
+        name: order
+        description: Orders results according to definitions listed below
+        type: string
+      - in: query
+        name: page
+        description: Number of requested members to return
+        type: string
+      - in: query
+        name: role
+        description: May be set to leads to filter returned members on the lead team
+        type: string
+      - in: query
+        name: status
+        description: A comma-delimited list of member statuses
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+    post:
+      summary: Group Join
+      description: This method allows an authenticated member to join a group by creating
+        a profile
+      operationId: profiles
+      x-api-path-slug: urlnamemembers-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+  /find/:urlname/members:
+    get:
+      summary: Group Profile search
+      description: |-
+        Find group member profiles by name.
+        Member's who very recently joined or left the group may not be immediately searchable
+      operationId: profiles
+      x-api-path-slug: findurlnamemembers-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: order
+        description: Orders results according to definitions listed below
+        type: string
+      - in: query
+        name: page
+        description: Number of requested members to return
+        type: string
+      - in: query
+        name: query
+        description: The name to search for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+      - Search
+  /:urlname:
+    get:
+      summary: Get Group
+      description: Fetches a Meetup group by urlname
+      operationId: groups
+      x-api-path-slug: urlname-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+    post:
+      summary: Group Edit
+      description: Allows organizers to edit their Meetup group information. To change
+        group topics, see the [add](/meetup_api/docs/:urlname/topics/#add) and [remove](/meetup_api/docs/:urlname/topics/#remove)
+        topics endpoints. To change group photo use the [Group photo upload](/meetup_api/docs/2/group_photo/#create)
+        endpoint. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes)
+        permission.
+      operationId: groups
+      x-api-path-slug: urlname-post
+      parameters:
+      - in: query
+        name: add_topics
+        description: Comma-delimited list of topic ids to associate with group
+        type: string
+      - in: query
+        name: country
+        description: The ISO_3166-1 country code for the country which contains the
+          city
+        type: string
+      - in: query
+        name: description
+        description: Summary of what the Meetup group is about in simple HTML format
+        type: string
+      - in: query
+        name: dryrun
+        description: Boolean parameter that will cause this endpoint to apply all
+          validation rules without actually saving changes in which case the response
+          will only reflect the groups current attributes
+        type: string
+      - in: query
+        name: ga_code
+        description: Google Analytics code for group
+        type: string
+      - in: query
+        name: join_mode
+        description: Controls how members are let into the group
+        type: string
+      - in: query
+        name: key_photo
+        description: Groups primary photo
+        type: string
+      - in: query
+        name: list_addr
+        description: Mailing list prefix
+        type: string
+      - in: query
+        name: list_mode
+        description: Defines policy for who can post to the group mailing list
+        type: string
+      - in: query
+        name: name
+        description: Display name of the group
+        type: string
+      - in: query
+        name: photo_req
+        description: Indicates that a member must provide a photo before joining
+        type: string
+      - in: query
+        name: questions_req
+        description: Indicates that provided questions are required before joining
+        type: string
+      - in: query
+        name: question_edit_{id}
+        description: Edits a current profile question identified by an id in the parameter
+          name
+        type: string
+      - in: query
+        name: question_{index}
+        description: A new profile question defined in the order of index provided
+          in the request parameter name
+        type: string
+      - in: query
+        name: remove_topics
+        description: Comma-delimited list of topic ids to disassociate with group
+        type: string
+      - in: query
+        name: urlname
+        description: Name used for the groups web address on meetup
+        type: string
+      - in: query
+        name: visibility
+        description: Restricts group visibility for non-members
+        type: string
+      - in: query
+        name: welcome_message
+        description: Message sent to members after they join
+        type: string
+      - in: query
+        name: who
+        description: What members of the group will be called
+        type: string
+      - in: query
+        name: zip
+        description: The ZIP code of the city
+        type: string
+      - in: query
+        name: '{service}_uri'
+        description: A URI for a social network service
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+  /:urlname/topics:
+    post:
+      summary: Group Topics Add
+      description: Associates topics with a given Meetup group. Limited to organizers
+        of the group. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes)
+        permission.
+      operationId: groups
+      x-api-path-slug: urlnametopics-post
+      parameters:
+      - in: query
+        name: topic_id
+        description: Comma-delimited list of topic ids to associate with group
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+    delete:
+      summary: Group Topics Remove
+      description: Disassociates topics with a given Meetup group. Limited to organizers
+        of the group. OAuth authenticated requests require an additional [group_edit](/meetup_api/auth/#oauth2-scopes)
+        permission.
+      operationId: groups
+      x-api-path-slug: urlnametopics-delete
+      parameters:
+      - in: query
+        name: topic_id
+        description: Comma-delimited list of topic ids to disassociate with group
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /find/locations:
+    get:
+      summary: Find locations
+      description: Provides a query interface for finding known locations
+      operationId: geo
+      x-api-path-slug: findlocations-get
+      parameters:
+      - in: query
+        name: lat
+        description: Search for locations based on location latitude
+        type: string
+      - in: query
+        name: lon
+        description: Search for locations based on location longitude
+        type: string
+      - in: query
+        name: offset
+        description: The current offset in the paginated set, represented as an incrementing
+          value
+        type: string
+      - in: query
+        name: page
+        description: The desired number of locations to return in a single set of
+          results
+        type: string
+      - in: query
+        name: query
+        description: Search for locations based on city name or zip code
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+      - Location
+  /self/calendar:
+    get:
+      summary: Member Calendar
+      description: Get a listing of all upcoming Meetup events for the authenticated
+        member
+      operationId: events
+      x-api-path-slug: selfcalendar-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields names which may be
+          appended to the response
+        type: string
+      - in: query
+        name: page
+        description: Number of results to return in a page
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Members
+      - Calendardars
+  /self/groups:
+    get:
+      summary: Member groups
+      description: |-
+        Lists the authenticated member's groups in the order of leadership,
+        next upcoming event, then alphabetical order by name
+      operationId: groups
+      x-api-path-slug: selfgroups-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: page
+        description: Number of groups to return in a single page of results
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Members
+      - Groups
+  /:urlname/events/:event_id/comments/:comment_id/likes:
+    get:
+      summary: Event Comment and Reply Likes
+      description: Returns lists of likes for an event comment or reply
+      operationId: comments
+      x-api-path-slug: urlnameeventsevent-idcommentscomment-idlikes-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Comments
+    post:
+      summary: Event Comment Like
+      description: Like a given event comment
+      operationId: comments
+      x-api-path-slug: urlnameeventsevent-idcommentscomment-idlikes-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Hosts
+    delete:
+      summary: Event Comment Unlike
+      description: Unlike a given event comment
+      operationId: comments
+      x-api-path-slug: urlnameeventsevent-idcommentscomment-idlikes-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Comments
+  /members/:member_id/photos/:photo_id:
+    delete:
+      summary: Member Photo Delete
+      description: Deletes a member photo by id
+      operationId: photos
+      x-api-path-slug: membersmember-idphotosphoto-id-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /members/:member_id/photos:
+    post:
+      summary: Member Photo Upload
+      description: Support for uploading new Member photos
+      operationId: photos
+      x-api-path-slug: membersmember-idphotos-post
+      parameters:
+      - in: query
+        name: await
+        description: Optional boolean parameter that, when set to true, will defer
+          a requests a response until confirmation that photo is immediately displayable
+          is received
+        type: string
+      - in: query
+        name: main
+        description: Optional boolean parameter that, when set to true, will cause
+          the members main profile photo to be set to the uploaded photo
+        type: string
+      - in: query
+        name: photo
+        description: Photo upload data, encoded as a multipart/form-data file
+        type: string
+      - in: query
+        name: sync_photo
+        description: Optional boolean parameter that, when set to true, will sync
+          all of the group profile photos for the member with the provided photo
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /pro/:urlname/groups:
+    get:
+      summary: Search Pro Groups
+      description: Name and statistics range search for the meetup groups belonging
+        to Pro organization.
+      operationId: pro
+      x-api-path-slug: prourlnamegroups-get
+      parameters:
+      - in: query
+        name: active_within_days
+        description: 'Positive Integer: including only those groups that had event
+          in the last specified days'
+        type: string
+      - in: query
+        name: average_age_max
+        description: 'Positive Integer: Maximum range of the average age of the members'
+        type: string
+      - in: query
+        name: average_age_min
+        description: 'Positive Integer: Minumum range of the average age of the members'
+        type: string
+      - in: query
+        name: category
+        description: 'List of Integers: the ids of the category of the group'
+        type: string
+      - in: query
+        name: chapters
+        description: 'List of Integer: the chapter ids that may belong to the organization'
+        type: string
+      - in: query
+        name: chapter_urlname
+        description: 'List of String: the urlnames of chapters that may belong to
+          the organization'
+        type: string
+      - in: query
+        name: country
+        description: 'String: Country'
+        type: string
+      - in: query
+        name: desc
+        description: 'List of Boolean: whether to sort ascending or decending on each
+          attributes in `order`'
+        type: string
+      - in: query
+        name: excluded_chapters
+        description: 'List of Integer: the chapters to exclude from the result'
+        type: string
+      - in: query
+        name: founded_date_max
+        description: 'Milliseconds since epoch: Maximum range of the founded dates
+          of the groups'
+        type: string
+      - in: query
+        name: founded_date_min
+        description: 'Milliseconds since epoch: Minumum range of the founded dates
+          of the groups'
+        type: string
+      - in: query
+        name: inactive_within_days
+        description: 'Positive Integer: including only those groups that did not have
+          event in the last specified days'
+        type: string
+      - in: query
+        name: last_event_max
+        description: 'Milliseconds since epoch: Maximum range of the date that the
+          last meetup happened'
+        type: string
+      - in: query
+        name: last_event_min
+        description: 'Milliseconds since epoch: Minumum range of the date that the
+          last meetup happened'
+        type: string
+      - in: query
+        name: lat
+        description: 'Float: Latitude'
+        type: string
+      - in: query
+        name: location
+        description: 'String: Raw location'
+        type: string
+      - in: query
+        name: lon
+        description: 'Float: Longitude'
+        type: string
+      - in: query
+        name: member_count_max
+        description: 'Positive Integer: Maximum range of the number of members'
+        type: string
+      - in: query
+        name: member_count_min
+        description: 'Positive Integer: Minimum range of the number of members'
+        type: string
+      - in: query
+        name: name
+        description: 'String: Name of the group looking for'
+        type: string
+      - in: query
+        name: next_event_max
+        description: 'Milliseconds since epoch: Maximum range of the date that the
+          next meetup is scheduled'
+        type: string
+      - in: query
+        name: next_event_min
+        description: 'Milliseconds since epoch: Minumum range of the date that the
+          next meetup is scheduled'
+        type: string
+      - in: query
+        name: offset
+        description: 'Positive Integer: the page offset'
+        type: string
+      - in: query
+        name: order
+        description: 'List of String: attributes to sort on'
+        type: string
+      - in: query
+        name: page
+        description: 'Positive Integer: the size of page window'
+        type: string
+      - in: query
+        name: past_events_max
+        description: 'Positive Integer: Maximum range of the number of the past events
+          held'
+        type: string
+      - in: query
+        name: past_events_min
+        description: 'Positive Integer: Minumum range of the number of the past events
+          held'
+        type: string
+      - in: query
+        name: past_rsvps_max
+        description: 'Positive Integer: Maximum range of the total number of past
+          RSVPs'
+        type: string
+      - in: query
+        name: past_rsvps_min
+        description: 'Positive Integer: Minumum range of the total number of past
+          RSVPs'
+        type: string
+      - in: query
+        name: pro_join_date_max
+        description: 'Milliseconds since epoch: Maximum range of the dates the groups
+          joined Pro organization'
+        type: string
+      - in: query
+        name: pro_join_date_min
+        description: 'Milliseconds since epoch: Minumum range of the dates the groups
+          joined Pro organization'
+        type: string
+      - in: query
+        name: query
+        description: 'String: raw query to search from group name, description, leadership
+          member name, or city'
+        type: string
+      - in: query
+        name: radius
+        description: 'String: `global`, `smart`, or search radius in Float'
+        type: string
+      - in: query
+        name: repeat_rsvpers_max
+        description: 'Positive Integer: Maximum range of the average number of repeat
+          rsvpers'
+        type: string
+      - in: query
+        name: repeat_rsvpers_min
+        description: 'Positive Integer: Minumum range of the average number of repeat
+          rsvpers'
+        type: string
+      - in: query
+        name: rsvps_per_event_max
+        description: 'Positive Integer: Maximum range of the average number of RSVPs
+          per event'
+        type: string
+      - in: query
+        name: rsvps_per_event_min
+        description: 'Positive Integer: Minumum range of the average number of RSVPs
+          per event'
+        type: string
+      - in: query
+        name: topics
+        description: 'List of Integers: the ids of topic of the group'
+        type: string
+      - in: query
+        name: upcoming_events_max
+        description: 'Positive Integer: Maximum range of the number of the upcoming
+          events'
+        type: string
+      - in: query
+        name: upcoming_events_min
+        description: 'Positive Integer: Minumum range of the number of the upcoming
+          events'
+        type: string
+      - in: query
+        name: zip
+        description: 'String: Zip code'
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+  /pro/:urlname/members:
+    get:
+      summary: Search Pro Members
+      description: Name, location, and time based search for the members of the meetups
+        belonging to Pro organization.
+      operationId: pro
+      x-api-path-slug: prourlnamemembers-get
+      parameters:
+      - in: query
+        name: active_within_days
+        description: 'Positive Integer: The range of date from the past until today,
+          for the recent activity'
+        type: string
+      - in: query
+        name: chapters
+        description: 'List of Integers: The chapters which the member belongs to'
+        type: string
+      - in: query
+        name: country
+        description: 'String: Country'
+        type: string
+      - in: query
+        name: desc
+        description: 'Boolean: whether to sort ascending or decending'
+        type: string
+      - in: query
+        name: email_received
+        description: 'Integers: The id of a previous emails that the member received'
+        type: string
+      - in: query
+        name: events_attended_max
+        description: 'Positive Integer: Maximum number of attended events'
+        type: string
+      - in: query
+        name: events_attended_min
+        description: 'Positive Integer: Minimum number of attended events'
+        type: string
+      - in: query
+        name: is_organizer
+        description: 'Boolean: To limit to only organizers or non-organizers'
+        type: string
+      - in: query
+        name: join_time_max
+        description: 'Milliseconds since epoch: The latest time limit for member join'
+        type: string
+      - in: query
+        name: join_time_min
+        description: 'Milliseconds since epoch: The oldest time limit for member join'
+        type: string
+      - in: query
+        name: lat
+        description: 'Float: Latitude'
+        type: string
+      - in: query
+        name: location
+        description: 'String: Raw location'
+        type: string
+      - in: query
+        name: lon
+        description: 'Float: Longitude'
+        type: string
+      - in: query
+        name: member_name
+        description: 'String: Name of the member'
+        type: string
+      - in: query
+        name: offset
+        description: 'Positive Integer: the page offset'
+        type: string
+      - in: query
+        name: order
+        description: 'String: attribute to sort on'
+        type: string
+      - in: query
+        name: page
+        description: 'Positive Integer: the size of page window'
+        type: string
+      - in: query
+        name: query
+        description: 'String: raw query string to search from member name or city'
+        type: string
+      - in: query
+        name: radius
+        description: 'String: `global`, `smart`, or search radius in Float'
+        type: string
+      - in: query
+        name: zip
+        description: 'String: Zip code'
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+  /pro/:urlname/tickets:
+    get:
+      summary: Search Issued Pro Tickets
+      description: Redeemed chapter, redeemed member, status, and timestamp for tickets
+        belonging to Pro organization.
+      operationId: pro
+      x-api-path-slug: prourlnametickets-get
+      parameters:
+      - in: query
+        name: chapters
+        description: 'Comma delimited positive integers: ids of redeemed chapters'
+        type: string
+      - in: query
+        name: chapter_name
+        description: 'String: partial or full name of the redeemed chapter'
+        type: string
+      - in: query
+        name: country
+        description: 'String: two-letter country code of the redeemed chapters'
+        type: string
+      - in: query
+        name: status
+        description: 'Comma delimited strings: ticket status, among the following:
+          inactive, available, claimed, redeemed'
+        type: string
+      - in: query
+        name: ticket_key
+        description: 'String: full matching string of an issued ticket key'
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Tickets
+  /notifications:
+    get:
+      summary: Notifications
+      description: Returns all recent Meetup notifications for the authorized member.
+        To mark notifications read use [/notifications/read](/meetup_api/docs/notifications/read/)
+        endpoint. To get the authenticated Member's current unread count, request
+        it in an [HTTP header](/meetup_api/docs/#meta-headers).
+      operationId: notifications
+      x-api-path-slug: notifications-get
+      parameters:
+      - in: query
+        name: fields
+        description: Request that additional fields (separated by commas) be included
+          in the output
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Notifications
+  /notifications/read:
+    post:
+      summary: Read Notifications
+      description: Marks groups of [notifications](/meetup_api/docs/notifications/)
+        as read.
+      operationId: notifications
+      x-api-path-slug: notificationsread-post
+      parameters:
+      - in: query
+        name: fields
+        description: Request that additional fields (separated by commas) be included
+          in the output
+        type: string
+      - in: query
+        name: since_id
+        description: The id of the newest notification item, typically the first in
+          the list returned by the notifications endpoint
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Notifications
+  /notifications/clicked:
+    post:
+      summary: Clicked Notifications
+      description: Marks groups of [notifications](/meetup_api/docs/notifications/)
+        as clicked.
+      operationId: notifications
+      x-api-path-slug: notificationsclicked-post
+      parameters:
+      - in: query
+        name: notif_id
+        description: The id of the notification to set as clicked
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Notifications
+  /:urlname/photo_albums/:album_id:
+    get:
+      summary: Photo Album
+      description: Gets information about a specific photo album
+      operationId: photos
+      x-api-path-slug: urlnamephoto-albumsalbum-id-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /:urlname/photo_albums:
+    get:
+      summary: Photo Album List
+      description: Gets a list a group photo albums in ascending order based on the
+        time they were created
+      operationId: photos
+      x-api-path-slug: urlnamephoto-albums-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional response fields
+        type: string
+      - in: query
+        name: offset
+        description: Incrementing number used for pagination offsets
+        type: string
+      - in: query
+        name: page
+        description: Number of albums to return per page of results
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /members/:member_id:
+    get:
+      summary: Get Member Profile
+      description: |-
+        Gets Member Profiles.
+        For Group Profiles, see [this endpoint](/meetup_api/docs/:urlname/members/:member_id)
+      operationId: profiles
+      x-api-path-slug: membersmember-id-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited string of optional response field names
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+    patch:
+      summary: Member Profile Edit
+      description: Edits Member Profiles.For Group Profiles, see [this endpoint](/meetup_api/docs/:urlname/members/:member_id)
+      operationId: profiles
+      x-api-path-slug: membersmember-id-patch
+      parameters:
+      - in: query
+        name: add_topics
+        description: Comma-delimited list of topic ids to add to members interest
+          list
+        type: string
+      - in: query
+        name: bio
+        description: Member bio of up to 250 characters
+        type: string
+      - in: query
+        name: bio_privacy
+        description: Preference for hiding or showing member bio to others
+        type: string
+      - in: query
+        name: birthday
+        description: Members date or year of birth
+        type: string
+      - in: query
+        name: city_id
+        description: Valid Meetup city identifier that indicates the city in which
+          the member resides
+        type: string
+      - in: query
+        name: facebook_privacy
+        description: Preference for hiding showing information members facebook connection
+        type: string
+      - in: query
+        name: gender
+        description: Members gender
+        type: string
+      - in: query
+        name: groups_privacy
+        description: Preference for hiding or showing group memberships to others
+        type: string
+      - in: query
+        name: lang
+        description: Members language preference
+        type: string
+      - in: query
+        name: lat
+        description: A valid latitude to resolve the closest location to associate
+          with the member
+        type: string
+      - in: query
+        name: lon
+        description: A valid longitude to resolve the closest location to associate
+          with the memberThis parameter must be accompanied by lat and zip
+        type: string
+      - in: query
+        name: messaging_pref
+        description: Preference for which members may contact you via the Meetup platform
+        type: string
+      - in: query
+        name: name
+        description: Member name
+        type: string
+      - in: query
+        name: photo_id
+        description: A valid photo id to this member has previously updated to use
+          as profile photo
+        type: string
+      - in: query
+        name: remove_topics
+        description: Comma-delimited list of topic ids to remove from members interest
+          list
+        type: string
+      - in: query
+        name: sync_photo
+        description: When set to true, this parameter will sync all the groupprofile
+          photos for the member with the provided photo_id
+        type: string
+      - in: query
+        name: topics_privacy
+        description: Preference for hiding or showing member interests to others
+        type: string
+      - in: query
+        name: zip
+        description: A valid zip code to associate with the member
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Profiles
+  /:urlname/members/:member_id:
+    get:
+      summary: Get Group Member Profile
+      description: |-
+        Gets Group Profiles.
+        For Member Profiles, see [this endpoint](/meetup_api/docs/members/:member_id)
+      operationId: profiles
+      x-api-path-slug: urlnamemembersmember-id-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited string of optional response field names
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+    patch:
+      summary: Edit Group Member Profile
+      description: |-
+        Edits Group Profiles.
+        To fetch Group Member Profiles,
+        see [this endpoint](/meetup_api/docs/:urlname/members/:member_id#get)
+      operationId: profiles
+      x-api-path-slug: urlnamemembersmember-id-patch
+      parameters:
+      - in: query
+        name: add_role
+        description: Allows those with permission to assign one of the following roles:assistant_organizer,
+          coorganizer, or event_organizer
+        type: string
+      - in: query
+        name: answer_{qid}
+        description: Answers to questions from groups API join_info question fields
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited string of optional response field names
+        type: string
+      - in: query
+        name: intro
+        description: Provides a Member an opportunity to tell the group about themselves,in
+          at most 255 characters
+        type: string
+      - in: query
+        name: photo_id
+        description: Numeric id of the photo to use for this profile
+        type: string
+      - in: query
+        name: remove_role
+        description: Allows those with permission to remove one of the following roles:assistant_organizer,
+          coorganizer, or event_organizer
+        type: string
+      - in: query
+        name: title
+        description: An organizer-defined title,in at most 255 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+    delete:
+      summary: Delete Group Member Profile (Leave Group)
+      description: Deletes a member's group profiles.
+      operationId: profiles
+      x-api-path-slug: urlnamemembersmember-id-delete
+      parameters:
+      - in: query
+        name: exit_comment
+        description: Optional message to the organizer when leaving
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
+  /:urlname/events/:event_id/photos/:photo_id/comments:
+    post:
+      summary: Photo Comment
+      description: Creates a new photo comment
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotosphoto-idcomments-post
+      parameters:
+      - in: query
+        name: comment
+        description: The text of the comment
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+      - Comments
+    get:
+      summary: Photo Comments
+      description: Lists photo comments associated with a photo
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotosphoto-idcomments-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+      - Comments
+  /:urlname/events/:event_id/photos/:photo_id/comments/:comment_id:
+    delete:
+      summary: Photo Comment Delete
+      description: Deletes photo comments
+      operationId: photos
+      x-api-path-slug: urlnameeventsevent-idphotosphoto-idcommentscomment-id-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+      - Comments
+  /:urlname/events/:event_id/rsvps:
+    post:
+      summary: RSVP Create and Update
+      description: Creates or updates an existing RSVP
+      operationId: rsvps
+      x-api-path-slug: urlnameeventsevent-idrsvps-post
+      parameters:
+      - in: query
+        name: agree_to_refund
+        description: A boolean indicator used for Events with ticketing feeds to imply
+          the Member has agreed to the Events refund policy
+        type: string
+      - in: query
+        name: answer_{qid}
+        description: Answers to Event survey questions
+        type: string
+      - in: query
+        name: guests
+        description: The number of guests Member will be attending with
+        type: string
+      - in: query
+        name: opt_to_pay
+        description: A boolean indicator used for Events with ticketing fees to imply
+          the Member has opted to pay as part of the RSVP request
+        type: string
+      - in: query
+        name: pro_email_share_optin
+        description: The authenticated Members email opt in status
+        type: string
+      - in: query
+        name: response
+        description: The authenticated Members RSVP response
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - RSVP
+    get:
+      summary: Event RSVP list
+      description: Retrieves list of event RSVPs
+      operationId: rsvps
+      x-api-path-slug: urlnameeventsevent-idrsvps-get
+      parameters:
+      - in: query
+        name: desc
+        description: Boolean value controling sort order of results
+        type: string
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: order
+        description: The sort order of returned RSVPs
+        type: string
+      - in: query
+        name: response
+        description: Filter returned list to one or more of the following RSVP responses
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - RSVP
+  /find/topic_categories:
+    get:
+      summary: Topic Categories
+      description: Returns a list high level topic categories
+      operationId: topics
+      x-api-path-slug: findtopic-categories-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-limited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: lat
+        description: An optional approximate latitude to center a request for best_topics
+        type: string
+      - in: query
+        name: lon
+        description: An optional approximate longitude to center a request for best_topics
+        type: string
+      - in: query
+        name: radius
+        description: An radius (in miles) to center a request for best_topics
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+      - Topic Categories
+  /recommended/events:
+    get:
+      summary: Recommended Events
+      description: Returns a list of upcoming recommended events
+      operationId: deprecated
+      x-api-path-slug: recommendedevents-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to populate in the
+          response
+        type: string
+      - in: query
+        name: lat
+        description: Approximate target latitude
+        type: string
+      - in: query
+        name: lon
+        description: Approximate target longitude
+        type: string
+      - in: query
+        name: page
+        description: A target minimum number of events to return in a single page
+          of results
+        type: string
+      - in: query
+        name: self_groups
+        description: Boolean indicator of whether or not to include events within
+          your existing Meetup network
+        type: string
+      - in: query
+        name: topic_category
+        description: Numeric topic category identifier for filtering recommendations
+          by a topic category
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+  /recommended/group_topics:
+    get:
+      summary: Recommend Group Topics
+      description: Recommends suggestions for group topics based on a text search
+        or other topics
+      operationId: topics
+      x-api-path-slug: recommendedgroup-topics-get
+      parameters:
+      - in: query
+        name: exclude_topics
+        description: A comma-delimited list of topic ids to exclude from the recommendations
+        type: string
+      - in: query
+        name: lang
+        description: Defines a language preference for ordering results
+        type: string
+      - in: query
+        name: other_topics
+        description: A comma-delimited list of topic ids to inform recommendations
+        type: string
+      - in: query
+        name: page
+        description: Target number of recommendations to return
+        type: string
+      - in: query
+        name: text
+        description: Free form text search
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Groups
+      - Topics
+  /recommended/groups:
+    get:
+      summary: Recommended Groups
+      description: Returns groups Meetup finds relevant to you
+      operationId: groups
+      x-api-path-slug: recommendedgroups-get
+      parameters:
+      - in: query
+        name: category
+        description: A valid category id which limits recommended groups to a particular
+          category
+        type: string
+      - in: query
+        name: country
+        description: A valid two character country code, defaults to US
+        type: string
+      - in: query
+        name: fields
+        description: Request that additional fields (separated by commas) be included
+          in the output
+        type: string
+      - in: query
+        name: instant_join_only
+        description: Recommend only groups without join requirements and that can
+          be joined instantly
+        type: string
+      - in: query
+        name: lat
+        description: Approximate latitude
+        type: string
+      - in: query
+        name: location
+        description: Raw text location query
+        type: string
+      - in: query
+        name: lon
+        description: Approximate longitude
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: sort
+        description: How to order the results
+        type: string
+      - in: query
+        name: topic_id
+        description: Comma delimited list of up to 100 topic ids to help inform recommendations
+        type: string
+      - in: query
+        name: zip
+        description: Zip code you are searching for recommendations in
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Groups
+  /recommended/groups/ignores/:urlname:
+    post:
+      summary: Recommended Groups Ignore
+      description: Provides a form of feedback by requesting to remove a group from
+        future recommendations
+      operationId: groups
+      x-api-path-slug: recommendedgroupsignoresurlname-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Groups
+  /recommended/venues:
+    get:
+      summary: Recommended Venues
+      description: Returns venues Meetup finds relevant to you based on location and
+        category. This method does not yet support sorting or pagination.
+      operationId: venues
+      x-api-path-slug: recommendedvenues-get
+      parameters:
+      - in: query
+        name: category
+        description: Comma-delimited list of up to 200 category ids to help inform
+          recommendations
+        type: string
+      - in: query
+        name: country
+        description: A valid two character country code, defaults to US
+        type: string
+      - in: query
+        name: group_id
+        description: Comma-delimited list of up to 200 group ids to help inform recommendations
+        type: string
+      - in: query
+        name: group_urlname
+        description: Comma-delimited list of up to 200 group urlnames to help inform
+          recommendations
+        type: string
+      - in: query
+        name: lat
+        description: Approximate latitude
+        type: string
+      - in: query
+        name: location
+        description: Raw text location query
+        type: string
+      - in: query
+        name: lon
+        description: Approximate longitude
+        type: string
+      - in: query
+        name: min_groups
+        description: The minimum number of groups that have hosted events at this
+          venue
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: used_between
+        description: Return venues that have been used within the given time range,
+          defined by two times separated with a single comma
+        type: string
+      - in: query
+        name: zip
+        description: Zip code you are searching for recommendations in
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Venues
+  /:urlname/similar_groups:
+    get:
+      summary: Similar groups
+      description: Renders a list of similar groups
+      operationId: groups
+      x-api-path-slug: urlnamesimilar-groups-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /find/topics:
+    get:
+      summary: Find Topics
+      description: Find topics by name
+      operationId: topics
+      x-api-path-slug: findtopics-get
+      parameters:
+      - in: query
+        name: page
+        description: Number of results to return in a single set of results
+        type: string
+      - in: query
+        name: query
+        description: The text to topic text search for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+      - Topics
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

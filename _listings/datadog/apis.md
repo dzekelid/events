@@ -6,58 +6,142 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-data
 x-kinRank: "8"
 x-alexaRank: "13593"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/apis.md
 specificationVersion: "0.14"
 apis:
-- name: DataDog API Add Events
-  x-api-slug: datadog-api
+- name: DataDog Merged API - Add Events
+  x-api-slug: events-post
   description: Post an Event
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
   humanURL: https://www.datadoghq.com/
-  baseURL: https:///api/v1///events
-  tags: Monitoring,Events
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/events-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/events-post-openapi.md
-- name: DataDog API Get Events Event
-  x-api-slug: datadog-api
+- name: DataDog Merged API - Get Events Event
+  x-api-slug: eventsevent-id-get
   description: GET events event
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
   humanURL: https://www.datadoghq.com/
-  baseURL: https:///api/v1///events/:event_id
-  tags: Monitoring,Events, Event
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-openapi.md
-- name: DataDog API Delete Events Event
-  x-api-slug: datadog-api
+- name: DataDog Merged API - Delete Events Event
+  x-api-slug: eventsevent-id-delete
   description: DELETE events event
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
   humanURL: https://www.datadoghq.com/
-  baseURL: https:///api/v1///events/:event_id
-  tags: Monitoring,Events, Event
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-openapi.md
-- name: DataDog API
-  x-api-slug: datadog-api
-  description: See inside any stack, any app, at any scale, anywhere.
+- name: DataDog Merged API - Get Events Event
+  x-api-slug: eventsevent-id-get
+  description: GET events event
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
   humanURL: https://www.datadoghq.com/
   baseURL: https:///api/v1/
-  tags: Events
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
   properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-postman.md
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-openapi.md
+- name: DataDog Merged API - Delete Events Event
+  x-api-slug: eventsevent-id-delete
+  description: DELETE events event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
+  humanURL: https://www.datadoghq.com/
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-openapi.md
+- name: DataDog Merged API - Get Events Event
+  x-api-slug: eventsevent-id-get
+  description: GET events event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
+  humanURL: https://www.datadoghq.com/
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-openapi.md
+- name: DataDog Merged API - Delete Events Event
+  x-api-slug: eventsevent-id-delete
+  description: DELETE events event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
+  humanURL: https://www.datadoghq.com/
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-openapi.md
+- name: DataDog Merged API - Get Events Event
+  x-api-slug: eventsevent-id-get
+  description: GET events event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
+  humanURL: https://www.datadoghq.com/
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-get-openapi.md
+- name: DataDog Merged API - Delete Events Event
+  x-api-slug: eventsevent-id-delete
+  description: DELETE events event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22961-datadog.jpg
+  humanURL: https://www.datadoghq.com/
+  baseURL: https:///api/v1/
+  tags: Monitoring, Performance, Orchestration, Aggregation, Stack Network, SaaS,
+    Technology, API Service Provider, API Provider, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/datadog/eventsevent-id-delete-openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://dataatwork.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://datadog.stack.network
 - type: x-blog
   url: https://www.datadoghq.com/blog/
 - type: x-blog-rss

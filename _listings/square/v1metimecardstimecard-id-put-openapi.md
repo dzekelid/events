@@ -67,6 +67,62 @@ paths:
       - Timecard
       - Events
       - Endpoint
+  /v1/me/timecards/{timecard_id}/events:
+    get:
+      summary: Provides summary information for all events associated with a particular
+        timecard.
+      description: Provides summary information for all events associated with a particular
+        timecard.
+      operationId: ListTimecardEvents
+      x-api-path-slug: v1metimecardstimecard-idevents-get
+      parameters:
+      - in: path
+        name: timecard_id
+        description: The ID of the timecard to list events for
+      responses:
+        200:
+          description: OK
+      tags:
+      - Provides
+      - Summary
+      - Information
+      - Events
+      - Associated
+      - Particular
+      - Timecard
+  /v1/{location_id}/cash-drawer-shifts/{shift_id}:
+    get:
+      summary: Provides the details for a single cash drawer shift, including all
+        events that occurred during the shift.
+      description: Provides the details for a single cash drawer shift, including
+        all events that occurred during the shift.
+      operationId: RetrieveCashDrawerShift
+      x-api-path-slug: v1location-idcashdrawershiftsshift-id-get
+      parameters:
+      - in: path
+        name: location_id
+        description: The ID of the location to list cash drawer shifts for
+      - in: path
+        name: shift_id
+        description: The shifts ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Provides
+      - Detailsa
+      - Single
+      - Cash
+      - Drawer
+      - Shift
+      - ""
+      - Including
+      - ""
+      - Events
+      - That
+      - Occurred
+      - During
+      - Shift
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

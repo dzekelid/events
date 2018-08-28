@@ -11,55 +11,46 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "7"
 x-alexaRank: "0"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/tigertext/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Tiger Connect Events API Drop the events connections.
-  x-api-slug: tiger-connect-events-api
+- name: Tiger Connect Events API - Drop the events connections.
+  x-api-slug: events-delete
   description: Drop the events connections.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/tigertext-logo.png
   humanURL: http://www.tigertext.com/
-  baseURL: https://developer.tigertext.me//v2///events/
-  tags: Events
+  baseURL: https://developer.tigertext.me//v2/
+  tags: SMS, Secure, SMS, Getting Started Example, SMS, Messages, Messages, Relative
+    Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/tigertext/events-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/tigertext/events-delete-openapi.md
-- name: Tiger Connect Events API Opens a SSE event stream.
-  x-api-slug: tiger-connect-events-api
+- name: Tiger Connect Events API - Opens a SSE event stream.
+  x-api-slug: events-get
   description: Opens a SSE event stream. The various Event Types are listed below.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/tigertext-logo.png
   humanURL: http://www.tigertext.com/
-  baseURL: https://developer.tigertext.me//v2///events/
-  tags: Events
+  baseURL: https://developer.tigertext.me//v2/
+  tags: SMS, Secure, SMS, Getting Started Example, SMS, Messages, Messages, Relative
+    Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/tigertext/events-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/tigertext/events-get-openapi.md
-- name: Tiger Connect Events API
-  x-api-slug: tiger-connect-events-api
-  description: TigerText is a multi-platform, secure, real-time messaging application
-    for the enterprise that allows text messages to be deleted from both the senders
-    and the receivers phones after expiration, which could be a set period of time
-    or after reading. The messages cannot be saved, copied or forwarded by recipients.
-    TigerText does this by storing the message on a company server, not the receiving
-    and sending device, and deleting when the expiration conditions are met.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/tigertext-logo.png
-  humanURL: http://www.tigertext.com/
-  baseURL: https://developer.tigertext.me//v2/
-  tags: Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/tigertext/openapi.md
 x-common:
 - type: x-android-sdk
   url: https://developer.tigertext.com/docs/sdk#android-sdk
 - type: x-angellist
   url: https://angel.co/tigertext
+- type: x-api-gallery
+  url: http://the.tvdb.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://tigertext.stack.network
 - type: x-authentication
   url: https://developer.tigertext.com/docs/tigerconnect-basics#authentication
 - type: x-base

@@ -12,63 +12,54 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "7"
 x-alexaRank: "0"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Getty Images Search API Get Events
-  x-api-slug: getty-images-search-api
+- name: Getty Images - Get Events
+  x-api-slug: v3events-get
   description: Get metadata for multiple events.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/uk-national-archives.jpeg
   humanURL: http://discovery.nationalarchives.gov.uk/SearchUI/api.htm
-  baseURL: https://api.gettyimages.com////v3/events
-  tags: Events
+  baseURL: https://api.gettyimages.com//
+  tags: Archives, Catalog, Government, History, General Data, Historical Data API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/v3events-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/v3events-get-openapi.md
-- name: Getty Images Search API Get Events
-  x-api-slug: getty-images-search-api
+- name: Getty Images - Get Events
+  x-api-slug: v3eventsid-get
   description: Get metadata for a single event.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/uk-national-archives.jpeg
   humanURL: http://discovery.nationalarchives.gov.uk/SearchUI/api.htm
-  baseURL: https://api.gettyimages.com////v3/events/{id}
-  tags: Events
+  baseURL: https://api.gettyimages.com//
+  tags: Archives, Catalog, Government, History, General Data, Historical Data API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/v3eventsid-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/v3eventsid-get-openapi.md
-- name: Getty Images Search API Get Search Events
-  x-api-slug: getty-images-search-api
+- name: Getty Images - Get Search Events
+  x-api-slug: v3searchevents-get
   description: Search for events.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/uk-national-archives.jpeg
   humanURL: http://discovery.nationalarchives.gov.uk/SearchUI/api.htm
-  baseURL: https://api.gettyimages.com////v3/search/events
-  tags: Search,Events
+  baseURL: https://api.gettyimages.com//
+  tags: Archives, Catalog, Government, History, General Data, Historical Data API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/v3searchevents-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/v3searchevents-get-openapi.md
-- name: Getty Images Search API
-  x-api-slug: getty-images-search-api
-  description: Our set of APIs enable seamless integration of Getty Images expansive
-    content, powerful search and rich metadata directly into your internal workflows,
-    products and services. With Connects API solutions, you can fully control, customize
-    and scale as you grow.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/uk-national-archives.jpeg
-  humanURL: http://discovery.nationalarchives.gov.uk/SearchUI/api.htm
-  baseURL: https://api.gettyimages.com//
-  tags: Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/uk-national-archives/openapi.md
 x-common:
 - type: x-website
   url: http://discovery.nationalarchives.gov.uk/SearchUI/api.htm
+- type: x-api-gallery
+  url: http://uebermaps.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://uk.national.archives.stack.network
 - type: x-website
   url: http:///Search
 include: []

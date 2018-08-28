@@ -112,6 +112,132 @@ paths:
       tags:
       - Events
       - Event
+  /Events{event_id}/Accept:
+    post:
+      summary: Add Events Event Accept
+      description: Post events event  accept
+      operationId: postEventsEventAccept
+      x-api-path-slug: eventsevent-idaccept-post
+      parameters:
+      - in: body
+        name: body
+        description: (Untitled)
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Event
+      - ""
+      - Accept
+    parameters:
+      summary: Parameters Events Event Accept
+      description: Parameters events event  accept
+      operationId: parametersEventsEventAccept
+      x-api-path-slug: eventsevent-idaccept-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Event
+      - ""
+      - Accept
+  /Events{event_id}/Decline:
+    post:
+      summary: Add Events Event Decline
+      description: Post events event  decline
+      operationId: postEventsEventDecline
+      x-api-path-slug: eventsevent-iddecline-post
+      parameters:
+      - in: body
+        name: body
+        description: (Untitled)
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Event
+      - ""
+      - Decline
+    parameters:
+      summary: Parameters Events Event Decline
+      description: Parameters events event  decline
+      operationId: parametersEventsEventDecline
+      x-api-path-slug: eventsevent-iddecline-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Event
+      - ""
+      - Decline
+  /Events{event_id}/TentativelyAccept:
+    post:
+      summary: Add Events Event Tentatively Accept
+      description: Post events event  tentativelyaccept
+      operationId: postEventsEventTentativelyaccept
+      x-api-path-slug: eventsevent-idtentativelyaccept-post
+      parameters:
+      - in: body
+        name: body
+        description: (Untitled)
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Event
+      - ""
+      - Tentativelyaccept
+    parameters:
+      summary: Parameters Events Event Tentatively Accept
+      description: Parameters events event  tentativelyaccept
+      operationId: parametersEventsEventTentativelyaccept
+      x-api-path-slug: eventsevent-idtentativelyaccept-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Event
+      - ""
+      - Tentativelyaccept
+  /Messages{event_id}/Send:
+    post:
+      summary: Add Messages Event Send
+      description: You can send an existing email that has the IsDraft property...
+      operationId: postMessagesEventSend
+      x-api-path-slug: messagesevent-idsend-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Messages
+      - Event
+      - ""
+      - Send
+    parameters:
+      summary: Parameters Messages Event Send
+      description: Parameters messages event  send
+      operationId: parametersMessagesEventSend
+      x-api-path-slug: messagesevent-idsend-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Messages
+      - Event
+      - ""
+      - Send
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

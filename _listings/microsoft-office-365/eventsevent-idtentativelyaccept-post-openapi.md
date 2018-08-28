@@ -198,6 +198,46 @@ paths:
       - Event
       - ""
       - Tentativelyaccept
+    parameters:
+      summary: Parameters Events Event Tentatively Accept
+      description: Parameters events event  tentativelyaccept
+      operationId: parametersEventsEventTentativelyaccept
+      x-api-path-slug: eventsevent-idtentativelyaccept-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Event
+      - ""
+      - Tentativelyaccept
+  /Messages{event_id}/Send:
+    post:
+      summary: Add Messages Event Send
+      description: You can send an existing email that has the IsDraft property...
+      operationId: postMessagesEventSend
+      x-api-path-slug: messagesevent-idsend-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Messages
+      - Event
+      - ""
+      - Send
+    parameters:
+      summary: Parameters Messages Event Send
+      description: Parameters messages event  send
+      operationId: parametersMessagesEventSend
+      x-api-path-slug: messagesevent-idsend-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Messages
+      - Event
+      - ""
+      - Send
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

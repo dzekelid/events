@@ -171,6 +171,139 @@ paths:
       - Issues
       - Events
       - Event
+  /repos/{owner}/{repo}/issues/{number}/events:
+    get:
+      summary: Get Repos Owner Repo Issues Number Events
+      description: List events for an issue.
+      operationId: list-events-for-an-issue
+      x-api-path-slug: reposownerrepoissuesnumberevents-get
+      parameters:
+      - in: header
+        name: Accept
+        description: Is used to set specified media type
+      - in: query
+        name: access_token
+        description: Your Github OAuth token
+      - in: path
+        name: number
+        description: Number of issue
+      - in: path
+        name: owner
+        description: Name of repository owner
+      - in: path
+        name: repo
+        description: Name of repository
+      responses:
+        200:
+          description: OK
+      tags:
+      - Repos
+      - Owner
+      - Repo
+      - Issues
+      - Number
+      - Events
+  /users/{username}/events:
+    get:
+      summary: Get Users Username Events
+      description: If you are authenticated as the given user, you will see your private
+        events. Otherwise, you'll only see public events.
+      operationId: if-you-are-authenticated-as-the-given-user-you-will-see-your-private-events-otherwise-youll-only-see
+      x-api-path-slug: usersusernameevents-get
+      parameters:
+      - in: header
+        name: Accept
+        description: Is used to set specified media type
+      - in: query
+        name: access_token
+        description: Your Github OAuth token
+      - in: path
+        name: username
+        description: Name of user
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Username
+      - Events
+  /users/{username}/events/orgs/{org}:
+    get:
+      summary: Get Users Username Events Orgs Org
+      description: This is the user's organization dashboard. You must be authenticated
+        as the user to view this.
+      operationId: this-is-the-users-organization-dashboard-you-must-be-authenticated-as-the-user-to-view-this
+      x-api-path-slug: usersusernameeventsorgsorg-get
+      parameters:
+      - in: header
+        name: Accept
+        description: Is used to set specified media type
+      - in: query
+        name: access_token
+        description: Your Github OAuth token
+      - in: path
+        name: org
+      - in: path
+        name: username
+        description: Name of user
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Username
+      - Events
+      - Orgs
+      - Org
+  /users/{username}/received_events:
+    get:
+      summary: Get Users Username Received Events
+      description: These are events that you'll only see public events.
+      operationId: these-are-events-that-youll-only-see-public-events
+      x-api-path-slug: usersusernamereceived-events-get
+      parameters:
+      - in: header
+        name: Accept
+        description: Is used to set specified media type
+      - in: query
+        name: access_token
+        description: Your Github OAuth token
+      - in: path
+        name: username
+        description: Name of user
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Username
+      - Received
+      - Events
+  /users/{username}/received_events/public:
+    get:
+      summary: Get Users Username Received Events Public
+      description: List public events that a user has received
+      operationId: list-public-events-that-a-user-has-received
+      x-api-path-slug: usersusernamereceived-eventspublic-get
+      parameters:
+      - in: header
+        name: Accept
+        description: Is used to set specified media type
+      - in: query
+        name: access_token
+        description: Your Github OAuth token
+      - in: path
+        name: username
+        description: Name of user
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Username
+      - Received
+      - Events
+      - Public
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

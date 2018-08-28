@@ -38,6 +38,32 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudformation/actiondescribestackevents-get-openapi.md
+- name: AWS CloudFormation API - Describe Stack Events
+  x-api-slug: actiondescribestackevents-get
+  description: Returns all stack related events for a specified stack in reverse chronological
+    order.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Management-Tools_AWSCloudFormation.png
+  humanURL: https://aws.amazon.com/cloudformation/
+  baseURL: :///
+  tags: Amazon Web Services, Management, Cloud, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Deployments, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudformation/actiondescribestackevents-get-openapi.md
+- name: AWS CloudFormation API - Describe Stack Events
+  x-api-slug: actiondescribestackevents-get
+  description: Returns all stack related events for a specified stack in reverse chronological
+    order.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Management-Tools_AWSCloudFormation.png
+  humanURL: https://aws.amazon.com/cloudformation/
+  baseURL: :///
+  tags: Amazon Web Services, Management, Cloud, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Deployments, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cloudformation/actiondescribestackevents-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://aws.certificate.manager.api.gallery.streamdata.io

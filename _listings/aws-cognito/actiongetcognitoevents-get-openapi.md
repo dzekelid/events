@@ -31,6 +31,23 @@ paths:
           description: OK
       tags:
       - Events
+  /?Action=SetCognitoEvents:
+    get:
+      summary: Set Cognito Events
+      description: Sets the AWS Lambda function for a given event type for an identity
+        pool.
+      operationId: setCognitoEvents
+      x-api-path-slug: actionsetcognitoevents-get
+      parameters:
+      - in: query
+        name: IdentityPoolId
+        description: The Cognito Identity Pool to use when configuring Cognito Events
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

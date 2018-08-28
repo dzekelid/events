@@ -251,10 +251,10 @@ paths:
   /events/{id}/:
     get:
       summary: Get Events
-      description: "Returns an event for the specified event. Many of Eventbrite\u2019s
-        API use cases revolve around pulling details\nof a specific event within an
-        Eventbrite account. Does not support fetching a repeating event series parent\n(see
-        GET /series/:id/)."
+      description: |-
+        Returns an event for the specified event. Many of Eventbrite???s API use cases revolve around pulling details
+        of a specific event within an Eventbrite account. Does not support fetching a repeating event series parent
+        (see GET /series/:id/).
       operationId: getEvents
       x-api-path-slug: eventsid-get
       responses:
@@ -1767,8 +1767,8 @@ paths:
       parameters:
       - in: query
         name: asc_or_desc
-        description: Valid options include asc or results in ascending order or desc
-          or descending order based on event start_date
+        description: Valid options include ???asc??? or results in ascending order
+          or ???desc??? or descending order based on event start_date
       - in: query
         name: data-type
         description: xml or json data-types are supported

@@ -69,6 +69,82 @@ paths:
       tags:
       - Eventsgiven
       - Fitlers
+    post:
+      summary: Create an activity event.
+      description: Request rate limited to 10 requests per second with bursts up to
+        100 requests.
+      operationId: ActivityEvent_CreateEvent
+      x-api-path-slug: apiv1activityevents-post
+      parameters:
+      - in: body
+        name: ActivityEvent
+        description: The Activity Event
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Activity
+      - Event
+  /api/v1/ActivityEvents/EventTypes:
+    get:
+      summary: Gets a list of all possible event types.
+      description: Request rate limited to 10 requests per second with bursts up to
+        100 requests.
+      operationId: ActivityEvent_GetEventTypes
+      x-api-path-slug: apiv1activityeventseventtypes-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - S
+      - List
+      - Of
+      - ""
+      - Possible
+      - Event
+      - Types
+  /api/v1/ActivityEvents/{EventId}:
+    get:
+      summary: Gets the event with the specified id.
+      description: Request rate limited to 10 requests per second with bursts up to
+        100 requests.
+      operationId: ActivityEvent_GetActivityEvent
+      x-api-path-slug: apiv1activityeventseventid-get
+      parameters:
+      - in: path
+        name: EventId
+        description: The id to search for
+      responses:
+        200:
+          description: OK
+      tags:
+      - S
+      - Event
+      - Specified
+      - Id
+    put:
+      summary: Update activity event
+      description: Request rate limited to 10 requests per second with bursts up to
+        100 requests.
+      operationId: ActivityEvent_UpdateActivityEvent
+      x-api-path-slug: apiv1activityeventseventid-put
+      parameters:
+      - in: body
+        name: activityEvent
+        description: The updated activityEvent
+        schema:
+          $ref: '#/definitions/holder'
+      - in: path
+        name: EventId
+        description: The Event Id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Activity
+      - Event
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

@@ -34,6 +34,34 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-elasticache/actiondescribeevents-get-openapi.md
+- name: AWS ElastiCache API - Describe Events
+  x-api-slug: actiondescribeevents-get
+  description: |-
+    Returns events related to cache clusters, cache
+                security groups, and cache parameter groups.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonElasticCache.png
+  humanURL: https://aws.amazon.com/elasticache/
+  baseURL: :///
+  tags: Amazon Web Services, Cache, Stack Network, Performance, Availability, API
+    Service Provider, API Service Provider, API Provider, Profiles, Relative Data,
+    Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-elasticache/actiondescribeevents-get-openapi.md
+- name: AWS ElastiCache API - Describe Events
+  x-api-slug: actiondescribeevents-get
+  description: |-
+    Returns events related to cache clusters, cache
+                security groups, and cache parameter groups.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonElasticCache.png
+  humanURL: https://aws.amazon.com/elasticache/
+  baseURL: :///
+  tags: Amazon Web Services, Cache, Stack Network, Performance, Availability, API
+    Service Provider, API Service Provider, API Provider, Profiles, Relative Data,
+    Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-elasticache/actiondescribeevents-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://aws.elastic.mapreduce.api.gallery.streamdata.io

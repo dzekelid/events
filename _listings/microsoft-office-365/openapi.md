@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Microsoft Office 365
 x-complete: 1
@@ -211,4 +210,30 @@ paths:
       - Event
       - ""
       - Tentativelyaccept
----
+  /Messages{event_id}/Send:
+    post:
+      summary: Add Messages Event Send
+      description: You can send an existing email that has the IsDraft property...
+      operationId: postMessagesEventSend
+      x-api-path-slug: messagesevent-idsend-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Messages
+      - Event
+      - ""
+      - Send
+    parameters:
+      summary: Parameters Messages Event Send
+      description: Parameters messages event  send
+      operationId: parametersMessagesEventSend
+      x-api-path-slug: messagesevent-idsend-parameters
+      responses:
+        200:
+          description: OK
+      tags:
+      - Messages
+      - Event
+      - ""
+      - Send

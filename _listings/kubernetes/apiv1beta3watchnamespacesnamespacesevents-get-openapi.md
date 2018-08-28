@@ -152,6 +152,27 @@ paths:
       - Watch
       - Namespaces
       - Events
+  /api/v1beta3/watch/namespaces/{namespaces}/events/{name}:
+    get:
+      summary: Get Watch Namespaces Events Name
+      description: Watch a particular event.
+      operationId: watchEvent
+      x-api-path-slug: apiv1beta3watchnamespacesnamespaceseventsname-get
+      parameters:
+      - in: path
+        name: name
+        description: name of the Event
+      - in: path
+        name: namespaces
+        description: object name and auth scope, such as for teams and projects
+      responses:
+        200:
+          description: OK
+      tags:
+      - Watch
+      - Namespaces
+      - Events
+      - Name
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

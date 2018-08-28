@@ -255,10 +255,10 @@ paths:
   /events/{id}/:
     get:
       summary: Get Events
-      description: "Returns an event for the specified event. Many of Eventbrite\u2019s
-        API use cases revolve around pulling details\nof a specific event within an
-        Eventbrite account. Does not support fetching a repeating event series parent\n(see
-        GET /series/:id/)."
+      description: |-
+        Returns an event for the specified event. Many of Eventbrite???s API use cases revolve around pulling details
+        of a specific event within an Eventbrite account. Does not support fetching a repeating event series parent
+        (see GET /series/:id/).
       operationId: getEvents
       x-api-path-slug: eventsid-get
       responses:
@@ -1688,6 +1688,550 @@ paths:
       - Class
       - Ticket
       - Groups
+  /venues/{id}/events/:
+    get:
+      summary: Get Venues Events
+      description: Returns events of a given venue.
+      operationId: getVenuesEvents
+      x-api-path-slug: venuesidevents-get
+      parameters:
+      - in: query
+        name: only_public
+        description: Only show public events even if viewing your own events
+        type: query
+      - in: query
+        name: order_by
+        description: 'How to order the results (Valid choices are: start_asc, start_desc,
+          created_asc, or created_desc)'
+        type: query
+      - in: query
+        name: start_date.range_end
+        description: Only return events with start dates before the given date
+        type: query
+      - in: query
+        name: start_date.range_start
+        description: Only return events with start dates after the given date
+        type: query
+      - in: query
+        name: status
+        description: Only return events with a specific status set
+        type: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Venues
+      - Events
+  /series/{id}/events/:
+    get:
+      summary: Get Series Events
+      description: Returns all of the events that belong to this repeating event series.
+      operationId: getSeriesEvents
+      x-api-path-slug: seriesidevents-get
+      parameters:
+      - in: query
+        name: order_by
+        description: 'How to order the results (Valid choices are: start_asc, start_desc,
+          created_asc, or created_desc)'
+        type: query
+      - in: query
+        name: time_filter
+        description: Limits results to either past or current &amp; future events
+        type: query
+      - in: query
+        name: tracking_code
+        description: Append the given tracking_code to the event URLs returned
+        type: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Series
+      - Events
+    post:
+      summary: Post Series Events
+      description: |-
+        Creates more event dates or updates or deletes existing event dates in a repeating event series. In order for a series
+        date to be deleted or updated, there must be no pending or completed orders for that date.
+      operationId: postSeriesEvents
+      x-api-path-slug: seriesidevents-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Series
+      - Events
+  /user_list_events:
+    get:
+      summary: Get User List Events
+      description: This method lists the events created by this user. Only public
+        events are returned if no authentication is passed.
+      operationId: Get_user_list_events_
+      x-api-path-slug: user-list-events-get
+      parameters:
+      - in: query
+        name: asc_or_desc
+        description: Valid options include ???asc??? or results in ascending order
+          or ???desc??? or descending order based on event start_date
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: do_not_display
+        description: Comma separated list without spaces
+      - in: query
+        name: email
+        description: The user email
+      - in: query
+        name: event_statuses
+        description: Comma separated list without spaces
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - List
+      - Events
+  /organizer_list_events:
+    get:
+      summary: Get Organizer List Events
+      description: This method returns a list of events for a given organizer.
+      operationId: Get_organizer_list_events_
+      x-api-path-slug: organizer-list-events-get
+      parameters:
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: id
+        description: The organizer id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Organizer
+      - List
+      - Events
+  /users/{id}/owned_event_attendees/:
+    get:
+      summary: Get Users Owned Event Attendees
+      description: |-
+        Returns a paginated response of attendees,
+        under the key attendees, of attendees visiting any of the events the user owns
+        (events that would be returned from /users/:id/owned_events/)
+      operationId: getUsersOwnedEventAttendees
+      x-api-path-slug: usersidowned-event-attendees-get
+      parameters:
+      - in: query
+        name: changed_since
+        description: Only return resource changed on or after the time given
+        type: query
+      - in: query
+        name: status
+        description: Limits results to either confirmed attendees or cancelled/refunded/etc
+        type: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Owned
+      - Event
+      - Attendees
+  /users/{id}/owned_event_orders/:
+    get:
+      summary: Get Users Owned Event Orders
+      description: |-
+        Returns a paginated response of orders,
+        under the key orders, of orders placed against any of the events the user owns
+        (events that would be returned from /users/:id/owned_events/)
+      operationId: getUsersOwnedEventOrders
+      x-api-path-slug: usersidowned-event-orders-get
+      parameters:
+      - in: query
+        name: changed_since
+        description: Only return resource changed on or after the time given
+        type: query
+      - in: query
+        name: exclude_emails
+        description: Don&#8217;t include orders placed by any of these emails
+        type: query
+      - in: query
+        name: only_emails
+        description: Only include orders placed by one of these emails
+        type: query
+      - in: query
+        name: status
+        description: 'Filter to active (attending), inactive (not attending), or all
+          (both) orders (Valid choices are: active, inactive, or all)'
+        type: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Users
+      - Owned
+      - Event
+      - Orders
+  /event_search:
+    get:
+      summary: Get Event Search
+      description: This method uses our search index to find publicly listed events.
+      operationId: Get_event_search_
+      x-api-path-slug: event-search-get
+      parameters:
+      - in: query
+        name: address
+        description: The venue address
+      - in: query
+        name: category
+        description: 'Event categories (comma seperated): conference, conventions,
+          entertainment, fundraisers, meetings, other, performances, reunions, sales,
+          seminars, social, sports, tradeshows, travel, religion, fairs, food, music,
+          recreation'
+      - in: query
+        name: city
+        description: The venue city
+      - in: query
+        name: country
+        description: 2-letter country code, according to the ISO 3166 format
+      - in: query
+        name: count_only
+        description: Only return the total number of events (???true??? or ???false???)
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: date
+        description: The event start date
+      - in: query
+        name: date_created
+        description: The date range the event was created, specified by a label or
+          by exact dates
+      - in: query
+        name: date_modified
+        description: The date range the event was modified, specified by a label or
+          by exact dates
+      - in: query
+        name: keywords
+        description: The search keywords
+      - in: query
+        name: latitude
+        description: If ???within??? is set you can limit your search to wgs84 coordinates
+          (latitude, longitude)
+      - in: query
+        name: longitude
+        description: If ???within??? is set you can limit your search to wgs84 coordinates
+          (latitude, longitude)
+      - in: query
+        name: max
+        description: Limit the number of events returned
+      - in: query
+        name: organizer
+        description: The organizer name
+      - in: query
+        name: page
+        description: Allows for paging through the results of a query
+      - in: query
+        name: postal_code
+        description: The postal/zip code of the venue
+      - in: query
+        name: region
+        description: The venue state/province/county/territory depending on the country
+      - in: query
+        name: since_id
+        description: Returns events with id greater than ???since_id??? value
+      - in: query
+        name: sort_by
+        description: Sort the list of events by ???id???, ???date???, ???name???,
+          ???city???
+      - in: query
+        name: tracking_link
+        description: The tracking link code to add to the event URLs
+      - in: query
+        name: within
+        description: If ???within??? is set and the ???city??? or ???zipcode??? resolve
+          to a specific geolocation, the search will be restricted to the specified
+          within radius
+      - in: query
+        name: within_unit
+        description: 'If within is set, you can specify the unit to use: ???M??? for
+          miles, or ???K??? for kilometers'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Search
+  /event_get:
+    get:
+      summary: Get Event Get
+      description: This method returns the data for a given event. Only public events
+        are viewable if no authentication is passed.
+      operationId: Get_event_get_
+      x-api-path-slug: event-get-get
+      parameters:
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: event_id
+        description: The ID of the requested event
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Get
+  /event_new:
+    get:
+      summary: Get Event New
+      description: This method creates a new event. It returns the ID of the newly
+        created event.
+      operationId: Get_event_new_
+      x-api-path-slug: event-new-get
+      parameters:
+      - in: query
+        name: background_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_background_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_border_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_header_background_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_header_text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: capacity
+        description: The maximum number of people who can attend the event
+      - in: query
+        name: currency
+        description: The event currency in ISO 4217 format (e
+      - in: query
+        name: custom_footer
+        description: Custom HTML footer for your registration page
+      - in: query
+        name: custom_header
+        description: Custom HTML header for your registration page
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: description
+        description: The event description
+      - in: query
+        name: end_date
+        description: The event end date and time, in ISO 8601 format (e
+      - in: query
+        name: organizer_id
+        description: The event organizer ID
+      - in: query
+        name: personalized_url
+        description: The event registration URL
+      - in: query
+        name: privacy
+        description: 0 for a private event, 1 for a public event
+      - in: query
+        name: start_date
+        description: The event start date and time, in ISO 8601 format (e
+      - in: query
+        name: status
+        description: The event status
+      - in: query
+        name: text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: timezone
+        description: The event time zone in relation to GMT (e
+      - in: query
+        name: title
+        description: The event title
+      - in: query
+        name: title_text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: venue_id
+        description: The event venue ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - New
+  /event_update:
+    get:
+      summary: Get Event Update
+      description: This method updates an existing event. Only the fields passed as
+        arguments will be modified. This method returns the ID of the modified event.
+      operationId: Get_event_update_
+      x-api-path-slug: event-update-get
+      parameters:
+      - in: query
+        name: background_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_background_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_border_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_header_background_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_header_text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: box_text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: capacity
+        description: The maximum number of people who can attend the event
+      - in: query
+        name: currency
+        description: The event currency in ISO 4217 format (e
+      - in: query
+        name: custom_footer
+        description: Custom HTML footer for your registration page
+      - in: query
+        name: custom_header
+        description: Custom HTML header for your registration page
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: description
+        description: The event description
+      - in: query
+        name: end_date
+        description: The event end date and time, in ISO 8601 format (e
+      - in: query
+        name: event_id
+        description: The ID of the event to update
+      - in: query
+        name: organizer_id
+        description: The event organizer ID
+      - in: query
+        name: personalized_url
+        description: The event registration URL subdomain
+      - in: query
+        name: privacy
+        description: 0 for a private event, 1 for a public event
+      - in: query
+        name: start_date
+        description: The event start date and time, in ISO 8601 format (e
+      - in: query
+        name: status
+        description: The event status
+      - in: query
+        name: text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: timezone
+        description: The event time zone in relation to GMT (e
+      - in: query
+        name: title
+        description: The event title
+      - in: query
+        name: title_text_color
+        description: Custom hexadecimal color for your registration page
+      - in: query
+        name: venue_id
+        description: The event venue ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Update
+  /event_copy:
+    get:
+      summary: Get Event Copy
+      description: This method duplicates an existing event, returning the ID of the
+        new event.
+      operationId: Get_event_copy_
+      x-api-path-slug: event-copy-get
+      parameters:
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: event_id
+        description: The ID of the existing event
+      - in: query
+        name: event_name
+        description: A new name for this copy of the Event
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - Copy
+  /event_list_attendees:
+    get:
+      summary: Get Event List Attendees
+      description: This method returns a list of attendees for a given event. If no
+        authentication is passed, only publicly available attendee records will be
+        returned.
+      operationId: Get_event_list_attendees_
+      x-api-path-slug: event-list-attendees-get
+      parameters:
+      - in: query
+        name: count
+        description: Limit the number of attendees returned
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: do_not_display
+        description: Comma separated list without spaces that leaves out certain data
+          returned
+      - in: query
+        name: event_id
+        description: The ID of the event
+      - in: query
+        name: page
+        description: Allows for paging through the results of a query
+      - in: query
+        name: show_full_barcodes
+        description: If set to ???true???, it will return all barcodes associates
+          with the attendee, plus the barcode status, device used, attendee_id, and
+          barcode number
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - List
+      - Attendees
+  /event_list_discounts:
+    get:
+      summary: Get Event List Discounts
+      description: This method returns a list of discounts for a given event.
+      operationId: Get_event_list_discounts_
+      x-api-path-slug: event-list-discounts-get
+      parameters:
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: id
+        description: The ID of the event
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event
+      - List
+      - Discounts
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

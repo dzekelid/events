@@ -7,154 +7,112 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-so
 x-kinRank: "8"
 x-alexaRank: "27308"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/apis.md
 specificationVersion: "0.14"
 apis:
-- name: BMC Software API Events?message={message}&amp;severity={severity}&amp;timestamp_utc_from={timestamp_utc_from}&amp;timestamp_utc_to={timestamp_utc_to}
-  x-api-slug: bmc-software-api
-  description: Gets a list of events for the current user.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
-  humanURL: http://www.bmc.com
-  baseURL: 'https://///events?message={message}&amp;severity={severity}&amp;timestamp_utc_from={timestamp_utc_from}&amp;timestamp_utc_to={timestamp_utc_to} '
-  tags: Custom Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/eventsmessagemessageampseverityseverityamptimestamp-utc-fromtimestamp-utc-fromamptimestamp-utc-totimestamp-utc-to-get-openapi.md
-- name: BMC Software API Custom Events
-  x-api-slug: bmc-software-api
-  description: Creates new custom event.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
-  humanURL: http://www.bmc.com
-  baseURL: 'https://///custom_events '
-  tags: Custom Events
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-events-post-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-events-post-openapi.md
-- name: BMC Software API Custom_events All?fromUtc={fromUtc}&amp;toUtc={toUtc}
-  x-api-slug: bmc-software-api
-  description: Gets all custom events using optional filter.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
-  humanURL: http://www.bmc.com
-  baseURL: 'https://///custom_events/all?fromUtc={fromUtc}&amp;toUtc={toUtc} '
-  tags: Custom Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-eventsallfromutcfromutcamptoutctoutc-get-openapi.md
-- name: BMC Software API Custom_events {id}
-  x-api-slug: bmc-software-api
-  description: Gets custom event by Id.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
-  humanURL: http://www.bmc.com
-  baseURL: 'https://///custom_events/{id} '
-  tags: Custom Events
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-eventsid-get-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-eventsid-get-openapi.md
-- name: BMC Software API Custom_events {id}
-  x-api-slug: bmc-software-api
-  description: Updates custom event.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
-  humanURL: http://www.bmc.com
-  baseURL: 'https://///custom_events/{id} '
-  tags: Custom Events
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-eventsid-put-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-eventsid-put-openapi.md
-- name: BMC Software API Custom_events {id}
-  x-api-slug: bmc-software-api
-  description: Deletes custom event.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
-  humanURL: http://www.bmc.com
-  baseURL: 'https://///custom_events/{id} '
-  tags: Custom Events
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-eventsid-delete-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/custom-eventsid-delete-openapi.md
-- name: BMC Software API Create event
-  x-api-slug: bmc-software-api
+- name: BMC Software Merged API - Create event
+  x-api-slug: v1events-post
   description: Creates an event. Every event occurrence is persisted to the database
     as a RawEvent. Based on the EventFingerprint, a new Event will be created or an
     existing one will be de-duplicated.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
   humanURL: http://www.bmc.com
-  baseURL: https://///v1/events
-  tags: Events
+  baseURL: https:///
+  tags: Monitoring, Applications, Devops, SaaS, Enterprise, Technology, ISP, API Provider,
+    API Service Provider, Profiles, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1events-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1events-post-openapi.md
-- name: BMC Software API List raw events
-  x-api-slug: bmc-software-api
+- name: BMC Software Merged API - List raw events
+  x-api-slug: v1eventsraw-get
   description: Queries all event occurrences (raw events) for the specified organization.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
   humanURL: http://www.bmc.com
-  baseURL: https://///v1/events/raw
-  tags: Events
+  baseURL: https:///
+  tags: Monitoring, Applications, Devops, SaaS, Enterprise, Technology, ISP, API Provider,
+    API Service Provider, Profiles, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1eventsraw-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1eventsraw-get-openapi.md
-- name: BMC Software API List events
-  x-api-slug: bmc-software-api
+- name: BMC Software Merged API - List events
+  x-api-slug: v1events-get
   description: Searches for events in the specified organization.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
   humanURL: http://www.bmc.com
-  baseURL: https://///v1/events
-  tags: Events
+  baseURL: https:///
+  tags: Monitoring, Applications, Devops, SaaS, Enterprise, Technology, ISP, API Provider,
+    API Service Provider, Profiles, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1events-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1events-get-openapi.md
-- name: BMC Software API Get event
-  x-api-slug: bmc-software-api
+- name: BMC Software Merged API - Get event
+  x-api-slug: v1eventsevent-id-get
   description: Returns the event with the specified event id from the database.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
   humanURL: http://www.bmc.com
-  baseURL: https://///v1/events/:event_id
-  tags: Events
+  baseURL: https:///
+  tags: Monitoring, Applications, Devops, SaaS, Enterprise, Technology, ISP, API Provider,
+    API Service Provider, Profiles, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1eventsevent-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1eventsevent-id-get-openapi.md
-- name: BMC Software API Get raw events
-  x-api-slug: bmc-software-api
+- name: BMC Software Merged API - Get raw events
+  x-api-slug: v1eventsevent-idraw-get
   description: Returns all of the event occurrences (raw events) for the specified
     event.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
   humanURL: http://www.bmc.com
-  baseURL: https://///v1/events/:event_id/raw
-  tags: Events
+  baseURL: https:///
+  tags: Monitoring, Applications, Devops, SaaS, Enterprise, Technology, ISP, API Provider,
+    API Service Provider, Profiles, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1eventsevent-idraw-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/v1eventsevent-idraw-get-openapi.md
-- name: BMC Software API
-  x-api-slug: bmc-software-api
-  description: Transform your digital enterprise with BMC IT solutions. From mainframe
-    to cloud to mobile, we???ll help you drive innovation and industrial efficiency.
+- name: BMC Software Merged API - Post an Event
+  x-api-slug: apiv1events-post
+  description: This end point allows you to post events to the stream. You can tag
+    them, set priority and event aggregate them with other events.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
   humanURL: http://www.bmc.com
   baseURL: https:///
-  tags: Events
+  tags: Monitoring, Applications, Devops, SaaS, Enterprise, Technology, ISP, API Provider,
+    API Service Provider, Profiles, Service API
   properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/apiv1events-post-postman.md
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/apiv1events-post-openapi.md
+- name: BMC Software Merged API - Post an Event
+  x-api-slug: apiv1events-post
+  description: This end point allows you to post events to the stream. You can tag
+    them, set priority and event aggregate them with other events.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg
+  humanURL: http://www.bmc.com
+  baseURL: https:///
+  tags: Monitoring, Applications, Devops, SaaS, Enterprise, Technology, ISP, API Provider,
+    API Service Provider, Profiles, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/apiv1events-post-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/bmc-software/apiv1events-post-openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://blogger.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://bmc.software.stack.network
 - type: x-blog
   url: http://www.bmc.com/blogs
 - type: x-blog-rss

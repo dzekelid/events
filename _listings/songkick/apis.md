@@ -1,21 +1,15 @@
 ---
 name: Songkick
-description: Songkick is a website and service that provides personalised news about
-  live music events. It allows users to track their favorite bands and receive email
-  alerts when a tracked band plays a gig nearby. Songkick is one of the original high
-  tech startups in Londons Silicon Roundabout area.
-image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/484_logo.png
+x-slug: songkick
+description: Songkick allows you to organize and track your favorite bands, get concert
+  alerts, and buy tickets. Get instant tour dates from your music library.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/484-songkick.jpg
 x-kinRank: "8"
-x-alexaRank: ""
-tags:
-- Stack Network
-- Music
-- Music
-- Events
-- API United Kingdom
-created: "2018-03-10"
-modified: "2018-03-10"
-url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/songkick/apis.yaml
+x-alexaRank: "2802"
+tags: Events
+created: "2018-08-27"
+modified: "2018-08-27"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/songkick/apis.md
 specificationVersion: "0.14"
 apis: []
 x-common:
@@ -26,9 +20,13 @@ x-common:
 - type: x-blog-rss
   url: http://blog.songkick.com/feed/atom/
 - type: x-crunchbase
+  url: https://crunchbase.com/organization/songkick
+- type: x-crunchbase
   url: http://www.crunchbase.com/company/songkick
 - type: x-developer
   url: http://www.songkick.com/developer
+- type: x-email
+  url: pr@songkick.com
 - type: x-github
   url: https://github.com/songkick
 - type: x-twitter

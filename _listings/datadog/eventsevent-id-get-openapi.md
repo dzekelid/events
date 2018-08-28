@@ -39,6 +39,18 @@ paths:
       - Monitoring
       - Events
       - Event
+    delete:
+      summary: Delete Events Event
+      description: DELETE events event
+      operationId: deleteEventsEvent
+      x-api-path-slug: eventsevent-id-delete
+      responses:
+        200:
+          description: OK
+      tags:
+      - Monitoring
+      - Events
+      - Event
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

@@ -82,6 +82,28 @@ paths:
       tags:
       - Events
       - Event
+  /venues/{VENUE_ID}/events:
+    get:
+      summary: Get Venues Events
+      description: /venues/trending
+      operationId: venuestrending
+      x-api-path-slug: venuesvenue-idevents-get
+      parameters:
+      - in: query
+        name: v
+        description: All requests now accept a v=YYYYMMDD param, which indicates that
+          the client is up to date as of the specified date
+      - in: query
+        name: VENUE_ID
+        description: The venue id for which events are being requested
+      - in: path
+        name: VENUE_ID
+      responses:
+        200:
+          description: OK
+      tags:
+      - Venues
+      - Events
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

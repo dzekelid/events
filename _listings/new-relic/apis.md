@@ -33,6 +33,90 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/alerts-events-format-get-openapi.md
+- name: New Relic - Get Alerts Events. Format
+  x-api-slug: alerts-events-format-get
+  description: "This API endpoint allows you to list the alert events for your account.\n\nAlerts
+    events can be filter by product, target type, group ID, instance ID, and event
+    type.\n\nThe options for products are: APM, BROWSER, MOBILE, SERVERS, PLUGINS,
+    SYNTHETICS, and ALERTS.\n\nThe options for entity type are: Application, Server,
+    KeyTransaction, Plugin, MobileApplication, BrowserApplication, and Monitor.\n\nThe
+    options for event type are: NOTIFICATION, DEPLOYMENT, VIOLATION_OPEN, VIOLATION_CLOSE,
+    VIOLATION, and INSTRUMENTATION.\n\nThe group ID option is normally the same as
+    the entity ID (e.g. an Application group ID and entity ID will be the same), however
+    PLUGINS have a group ID representing the PLUGIN itself, and entity IDs for all
+    instances of that PLUGIN type.\n\nSee our documentation for a discussion on \noutput
+    pagination."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-relic.jpg
+  humanURL: https://newrelic.com/
+  baseURL: https:///v2/
+  tags: Monitoring, Performance, Stack Network, Technology, SaaS, API Service Provider,
+    Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/alerts-events-format-get-openapi.md
+- name: New Relic - Get Alerts Events. Format
+  x-api-slug: alerts-events-format-get
+  description: "This API endpoint allows you to list the alert events for your account.\n\nAlerts
+    events can be filter by product, target type, group ID, instance ID, and event
+    type.\n\nThe options for products are: APM, BROWSER, MOBILE, SERVERS, PLUGINS,
+    SYNTHETICS, and ALERTS.\n\nThe options for entity type are: Application, Server,
+    KeyTransaction, Plugin, MobileApplication, BrowserApplication, and Monitor.\n\nThe
+    options for event type are: NOTIFICATION, DEPLOYMENT, VIOLATION_OPEN, VIOLATION_CLOSE,
+    VIOLATION, and INSTRUMENTATION.\n\nThe group ID option is normally the same as
+    the entity ID (e.g. an Application group ID and entity ID will be the same), however
+    PLUGINS have a group ID representing the PLUGIN itself, and entity IDs for all
+    instances of that PLUGIN type.\n\nSee our documentation for a discussion on \noutput
+    pagination."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-relic.jpg
+  humanURL: https://newrelic.com/
+  baseURL: https:///v2/
+  tags: Monitoring, Performance, Stack Network, Technology, SaaS, API Service Provider,
+    Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/alerts-events-format-get-openapi.md
+- name: New Relic - Get Alerts Events. Format
+  x-api-slug: alerts-events-format-get
+  description: "This API endpoint allows you to list the alert events for your account.\n\nAlerts
+    events can be filter by product, target type, group ID, instance ID, and event
+    type.\n\nThe options for products are: APM, BROWSER, MOBILE, SERVERS, PLUGINS,
+    SYNTHETICS, and ALERTS.\n\nThe options for entity type are: Application, Server,
+    KeyTransaction, Plugin, MobileApplication, BrowserApplication, and Monitor.\n\nThe
+    options for event type are: NOTIFICATION, DEPLOYMENT, VIOLATION_OPEN, VIOLATION_CLOSE,
+    VIOLATION, and INSTRUMENTATION.\n\nThe group ID option is normally the same as
+    the entity ID (e.g. an Application group ID and entity ID will be the same), however
+    PLUGINS have a group ID representing the PLUGIN itself, and entity IDs for all
+    instances of that PLUGIN type.\n\nSee our documentation for a discussion on \noutput
+    pagination."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-relic.jpg
+  humanURL: https://newrelic.com/
+  baseURL: https:///v2/
+  tags: Monitoring, Performance, Stack Network, Technology, SaaS, API Service Provider,
+    Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/alerts-events-format-get-openapi.md
+- name: New Relic - Get Alerts Events. Format
+  x-api-slug: alerts-events-format-get
+  description: "This API endpoint allows you to list the alert events for your account.\n\nAlerts
+    events can be filter by product, target type, group ID, instance ID, and event
+    type.\n\nThe options for products are: APM, BROWSER, MOBILE, SERVERS, PLUGINS,
+    SYNTHETICS, and ALERTS.\n\nThe options for entity type are: Application, Server,
+    KeyTransaction, Plugin, MobileApplication, BrowserApplication, and Monitor.\n\nThe
+    options for event type are: NOTIFICATION, DEPLOYMENT, VIOLATION_OPEN, VIOLATION_CLOSE,
+    VIOLATION, and INSTRUMENTATION.\n\nThe group ID option is normally the same as
+    the entity ID (e.g. an Application group ID and entity ID will be the same), however
+    PLUGINS have a group ID representing the PLUGIN itself, and entity IDs for all
+    instances of that PLUGIN type.\n\nSee our documentation for a discussion on \noutput
+    pagination."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-relic.jpg
+  humanURL: https://newrelic.com/
+  baseURL: https:///v2/
+  tags: Monitoring, Performance, Stack Network, Technology, SaaS, API Service Provider,
+    Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/alerts-events-format-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://netlicensing.api.gallery.streamdata.io

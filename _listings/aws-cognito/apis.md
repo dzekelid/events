@@ -50,6 +50,66 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actionsetcognitoevents-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actionsetcognitoevents-get-openapi.md
+- name: AWS Cognito Merged API - Get Cognito Events
+  x-api-slug: actiongetcognitoevents-get
+  description: Gets the events and the corresponding Lambda functions associated with
+    an identity pool.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-cognito.png
+  humanURL: https://aws.amazon.com/cognito/
+  baseURL: https:///
+  tags: Amazon Web Services, Authentication, Social, Facebook, Twitter, Stack Network,
+    API Service Provider, API Service Provider, API Provider, Identities, Profiles,
+    Relative Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actiongetcognitoevents-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actiongetcognitoevents-get-openapi.md
+- name: AWS Cognito Merged API - Set Cognito Events
+  x-api-slug: actionsetcognitoevents-get
+  description: Sets the AWS Lambda function for a given event type for an identity
+    pool.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-cognito.png
+  humanURL: https://aws.amazon.com/cognito/
+  baseURL: https:///
+  tags: Amazon Web Services, Authentication, Social, Facebook, Twitter, Stack Network,
+    API Service Provider, API Service Provider, API Provider, Identities, Profiles,
+    Relative Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actionsetcognitoevents-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actionsetcognitoevents-get-openapi.md
+- name: AWS Cognito Merged API - Get Cognito Events
+  x-api-slug: actiongetcognitoevents-get
+  description: Gets the events and the corresponding Lambda functions associated with
+    an identity pool.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-cognito.png
+  humanURL: https://aws.amazon.com/cognito/
+  baseURL: https:///
+  tags: Amazon Web Services, Authentication, Social, Facebook, Twitter, Stack Network,
+    API Service Provider, API Service Provider, API Provider, Identities, Profiles,
+    Relative Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actiongetcognitoevents-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actiongetcognitoevents-get-openapi.md
+- name: AWS Cognito Merged API - Set Cognito Events
+  x-api-slug: actionsetcognitoevents-get
+  description: Sets the AWS Lambda function for a given event type for an identity
+    pool.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-cognito.png
+  humanURL: https://aws.amazon.com/cognito/
+  baseURL: https:///
+  tags: Amazon Web Services, Authentication, Social, Facebook, Twitter, Stack Network,
+    API Service Provider, API Service Provider, API Provider, Identities, Profiles,
+    Relative Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actionsetcognitoevents-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-cognito/actionsetcognitoevents-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://aws.codedeploy.api.gallery.streamdata.io

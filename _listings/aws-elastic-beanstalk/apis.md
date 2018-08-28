@@ -32,6 +32,32 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-elastic-beanstalk/actiondescribeevents-get-openapi.md
+- name: AWS Elastic Beanstalk API - Describe Events
+  x-api-slug: actiondescribeevents-get
+  description: Returns list of event descriptions matching criteria up to the last
+    6 weeks.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Compute_AWSElasticBeanstalk.png
+  humanURL: https://aws.amazon.com/elasticbeanstalk/
+  baseURL: :///
+  tags: Amazon Web Services, Containers, Stack Network, API Service Provider, API
+    Service Provider, API Provider, Deployments, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-elastic-beanstalk/actiondescribeevents-get-openapi.md
+- name: AWS Elastic Beanstalk API - Describe Events
+  x-api-slug: actiondescribeevents-get
+  description: Returns list of event descriptions matching criteria up to the last
+    6 weeks.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Compute_AWSElasticBeanstalk.png
+  humanURL: https://aws.amazon.com/elasticbeanstalk/
+  baseURL: :///
+  tags: Amazon Web Services, Containers, Stack Network, API Service Provider, API
+    Service Provider, API Provider, Deployments, Profiles, Relative Data, Service
+    API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-elastic-beanstalk/actiondescribeevents-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://aws.ec2.systems.manager.api.gallery.streamdata.io

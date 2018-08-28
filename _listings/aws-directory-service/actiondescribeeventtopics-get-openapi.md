@@ -60,6 +60,29 @@ paths:
       tags:
       - Events
       - Topics
+  /?Action=RegisterEventTopic:
+    get:
+      summary: Register Event Topic
+      description: Associates a directory with an SNS topic.
+      operationId: registerEventTopic
+      x-api-path-slug: actionregistereventtopic-get
+      parameters:
+      - in: query
+        name: DirectoryId
+        description: The Directory ID that will publish status messages to the SNS
+          topic
+        type: string
+      - in: query
+        name: TopicName
+        description: The SNS topic name to which the directory will publish status
+          messages
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Topics
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

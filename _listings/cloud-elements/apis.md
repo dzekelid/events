@@ -7,35 +7,30 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/9066-cloud
 x-kinRank: "7"
 x-alexaRank: "278908"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/cloud-elements/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Cloud Elements - Dropbox For Business API Get Events
-  x-api-slug: cloud-elements--dropbox-for-business-api
+- name: Dropbox for Business API - Get Events
+  x-api-slug: logget-events-post
   description: Get events.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/9066-cloud-elements.jpg
   humanURL: http://www.cloud-elements.com/
-  baseURL: https://api.dropbox.com//1/team//log/get_events
-  tags: Events
+  baseURL: https://api.dropbox.com//1/team
+  tags: Aggregation, Cloud, Aggregation, Aggregation, API LIfeyclessss, SaaS, Technology,
+    Enterprise, internet, API Service Provider, API Provider, Profiles, Service API,
+    Relative Data
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/cloud-elements/logget-events-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/cloud-elements/logget-events-post-openapi.md
-- name: Cloud Elements - Dropbox For Business API
-  x-api-slug: cloud-elements--dropbox-for-business-api
-  description: Cloud Elements is the leading API integration platform for SaaS app
-    providers and the digital enterprise. Turn integration into your competitive advantage.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/9066-cloud-elements.jpg
-  humanURL: http://www.cloud-elements.com/
-  baseURL: https://api.dropbox.com//1/team
-  tags: Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/cloud-elements/openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://clockwork.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://cloud.elements.stack.network
 - type: x-blog
   url: http://www.cloud-elements.com/blog/
 - type: x-blog-rss

@@ -7,62 +7,144 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-consta
 x-kinRank: "7"
 x-alexaRank: "1364"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Constant Contact Get Campaign Events
-  x-api-slug: constant-contact
+- name: Constant Contact - Get Campaign Events
+  x-api-slug: usernamecampaignscampaignidevents-get
   description: Get Campaign Events
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
   humanURL: http://blogs.constantcontact.com
-  baseURL: https://api.constantcontact.com//ws/customers///{username}/campaigns/{campaign-id}/events/
-  tags: Campaign,Events
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernamecampaignscampaignidevents-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernamecampaignscampaignidevents-get-openapi.md
-- name: Constant Contact Get Per-Contact Campaign Events
-  x-api-slug: constant-contact
+- name: Constant Contact - Get Per-Contact Campaign Events
+  x-api-slug: usernamecontactscontactidevents-get
   description: Get Per-Contact Campaign Events
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
   humanURL: http://blogs.constantcontact.com
-  baseURL: https://api.constantcontact.com//ws/customers///{username}/contacts/{contact-id}/events/
-  tags: Per-Contact,Campaign,Events
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernamecontactscontactidevents-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernamecontactscontactidevents-get-openapi.md
-- name: Constant Contact List Events
-  x-api-slug: constant-contact
+- name: Constant Contact - List Events
+  x-api-slug: usernameevents-get
   description: List Events
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
   humanURL: http://blogs.constantcontact.com
-  baseURL: https://api.constantcontact.com//ws/customers///{username}/events
-  tags: List,Events
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-get-openapi.md
-- name: Constant Contact
-  x-api-slug: constant-contact
-  description: With Constant Contact, you can create effective email marketing and
-    other online marketing campaigns to meet your business goals. Start your FREE
-    trial today!
+- name: Constant Contact - Add Event
+  x-api-slug: usernameevents-post
+  description: Add Event
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
   humanURL: http://blogs.constantcontact.com
   baseURL: https://api.constantcontact.com//ws/customers/
-  tags: Events
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
   properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-post-postman.md
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/openapi.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-post-openapi.md
+- name: Constant Contact - Get Event
+  x-api-slug: usernameeventseventid-get
+  description: Get Event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
+  humanURL: http://blogs.constantcontact.com
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameeventseventid-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameeventseventid-get-openapi.md
+- name: Constant Contact - Add Event
+  x-api-slug: usernameevents-post
+  description: Add Event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
+  humanURL: http://blogs.constantcontact.com
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-post-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-post-openapi.md
+- name: Constant Contact - Get Event
+  x-api-slug: usernameeventseventid-get
+  description: Get Event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
+  humanURL: http://blogs.constantcontact.com
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameeventseventid-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameeventseventid-get-openapi.md
+- name: Constant Contact - Get Event
+  x-api-slug: usernameeventseventid-get
+  description: Get Event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
+  humanURL: http://blogs.constantcontact.com
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameeventseventid-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameeventseventid-get-openapi.md
+- name: Constant Contact - Add Event
+  x-api-slug: usernameevents-post
+  description: Add Event
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
+  humanURL: http://blogs.constantcontact.com
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-post-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/constant-contact/usernameevents-post-openapi.md
 x-common:
 - type: x--net-library
   url: https://github.com/constantcontact/.net-sdk
+- type: x-api-gallery
+  url: http://compile.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://constant.contact.stack.network
 - type: x-authentication
   url: http://developer.constantcontact.com/docs/authentication/authentication.html
 - type: x-base

@@ -2789,6 +2789,39 @@ paths:
           description: OK
       tags:
       - Events
+    get:
+      summary: Group Events
+      description: Gets a listing of all Meetup Events hosted by a target group, in
+        ascending order by default
+      operationId: events
+      x-api-path-slug: urlnameevents-get
+      parameters:
+      - in: query
+        name: desc
+        description: When true, sorts results in descending order
+        type: string
+      - in: query
+        name: fields
+        description: Comma-delimited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: page
+        description: Number of results to return in a page
+        type: string
+      - in: query
+        name: scroll
+        description: A string representing an alias for a point on a timeline
+        type: string
+      - in: query
+        name: status
+        description: A comma-delimited list of event statuses
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Groups
   /:urlname/events/:id:
     patch:
       summary: Update Event
@@ -4613,6 +4646,285 @@ paths:
       tags:
       - Events
       - RSVP
+  /find/topic_categories:
+    get:
+      summary: Topic Categories
+      description: Returns a list high level topic categories
+      operationId: topics
+      x-api-path-slug: findtopic-categories-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-limited list of optional fields to append to the response
+        type: string
+      - in: query
+        name: lat
+        description: An optional approximate latitude to center a request for best_topics
+        type: string
+      - in: query
+        name: lon
+        description: An optional approximate longitude to center a request for best_topics
+        type: string
+      - in: query
+        name: radius
+        description: An radius (in miles) to center a request for best_topics
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+      - Topic Categories
+  /recommended/events:
+    get:
+      summary: Recommended Events
+      description: Returns a list of upcoming recommended events
+      operationId: deprecated
+      x-api-path-slug: recommendedevents-get
+      parameters:
+      - in: query
+        name: fields
+        description: A comma-delimited list of optional fields to populate in the
+          response
+        type: string
+      - in: query
+        name: lat
+        description: Approximate target latitude
+        type: string
+      - in: query
+        name: lon
+        description: Approximate target longitude
+        type: string
+      - in: query
+        name: page
+        description: A target minimum number of events to return in a single page
+          of results
+        type: string
+      - in: query
+        name: self_groups
+        description: Boolean indicator of whether or not to include events within
+          your existing Meetup network
+        type: string
+      - in: query
+        name: topic_category
+        description: Numeric topic category identifier for filtering recommendations
+          by a topic category
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+  /recommended/group_topics:
+    get:
+      summary: Recommend Group Topics
+      description: Recommends suggestions for group topics based on a text search
+        or other topics
+      operationId: topics
+      x-api-path-slug: recommendedgroup-topics-get
+      parameters:
+      - in: query
+        name: exclude_topics
+        description: A comma-delimited list of topic ids to exclude from the recommendations
+        type: string
+      - in: query
+        name: lang
+        description: Defines a language preference for ordering results
+        type: string
+      - in: query
+        name: other_topics
+        description: A comma-delimited list of topic ids to inform recommendations
+        type: string
+      - in: query
+        name: page
+        description: Target number of recommendations to return
+        type: string
+      - in: query
+        name: text
+        description: Free form text search
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Groups
+      - Topics
+  /recommended/groups:
+    get:
+      summary: Recommended Groups
+      description: Returns groups Meetup finds relevant to you
+      operationId: groups
+      x-api-path-slug: recommendedgroups-get
+      parameters:
+      - in: query
+        name: category
+        description: A valid category id which limits recommended groups to a particular
+          category
+        type: string
+      - in: query
+        name: country
+        description: A valid two character country code, defaults to US
+        type: string
+      - in: query
+        name: fields
+        description: Request that additional fields (separated by commas) be included
+          in the output
+        type: string
+      - in: query
+        name: instant_join_only
+        description: Recommend only groups without join requirements and that can
+          be joined instantly
+        type: string
+      - in: query
+        name: lat
+        description: Approximate latitude
+        type: string
+      - in: query
+        name: location
+        description: Raw text location query
+        type: string
+      - in: query
+        name: lon
+        description: Approximate longitude
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: sort
+        description: How to order the results
+        type: string
+      - in: query
+        name: topic_id
+        description: Comma delimited list of up to 100 topic ids to help inform recommendations
+        type: string
+      - in: query
+        name: zip
+        description: Zip code you are searching for recommendations in
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Groups
+  /recommended/groups/ignores/:urlname:
+    post:
+      summary: Recommended Groups Ignore
+      description: Provides a form of feedback by requesting to remove a group from
+        future recommendations
+      operationId: groups
+      x-api-path-slug: recommendedgroupsignoresurlname-post
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Groups
+  /recommended/venues:
+    get:
+      summary: Recommended Venues
+      description: Returns venues Meetup finds relevant to you based on location and
+        category. This method does not yet support sorting or pagination.
+      operationId: venues
+      x-api-path-slug: recommendedvenues-get
+      parameters:
+      - in: query
+        name: category
+        description: Comma-delimited list of up to 200 category ids to help inform
+          recommendations
+        type: string
+      - in: query
+        name: country
+        description: A valid two character country code, defaults to US
+        type: string
+      - in: query
+        name: group_id
+        description: Comma-delimited list of up to 200 group ids to help inform recommendations
+        type: string
+      - in: query
+        name: group_urlname
+        description: Comma-delimited list of up to 200 group urlnames to help inform
+          recommendations
+        type: string
+      - in: query
+        name: lat
+        description: Approximate latitude
+        type: string
+      - in: query
+        name: location
+        description: Raw text location query
+        type: string
+      - in: query
+        name: lon
+        description: Approximate longitude
+        type: string
+      - in: query
+        name: min_groups
+        description: The minimum number of groups that have hosted events at this
+          venue
+        type: string
+      - in: query
+        name: radius
+        description: Radius in miles
+        type: string
+      - in: query
+        name: used_between
+        description: Return venues that have been used within the given time range,
+          defined by two times separated with a single comma
+        type: string
+      - in: query
+        name: zip
+        description: Zip code you are searching for recommendations in
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Recomendations
+      - Venues
+  /:urlname/similar_groups:
+    get:
+      summary: Similar groups
+      description: Renders a list of similar groups
+      operationId: groups
+      x-api-path-slug: urlnamesimilar-groups-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Photos
+  /find/topics:
+    get:
+      summary: Find Topics
+      description: Find topics by name
+      operationId: topics
+      x-api-path-slug: findtopics-get
+      parameters:
+      - in: query
+        name: page
+        description: Number of results to return in a single set of results
+        type: string
+      - in: query
+        name: query
+        description: The text to topic text search for
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Events
+      - Search
+      - Topics
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

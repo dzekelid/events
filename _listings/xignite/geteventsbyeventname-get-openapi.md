@@ -136,6 +136,230 @@ paths:
       - Events
       - Event
       - Name
+  /GetEventsForDate:
+    get:
+      summary: Get Events For Date
+      description: Get events for the specified date.
+      operationId: postGeteventsfordate
+      x-api-path-slug: geteventsfordate-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Date
+  /GetEventsForMonth:
+    get:
+      summary: Get Events For Month
+      description: Get events for the specified date.
+      operationId: postGeteventsformonth
+      x-api-path-slug: geteventsformonth-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Month
+  /GetEventsForRange:
+    get:
+      summary: Get Events For Range
+      description: Get events for the specified range.
+      operationId: postGeteventsforrange
+      x-api-path-slug: geteventsforrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Range
+  /GetEventsForRangeLength:
+    get:
+      summary: Get Events For Range Length
+      description: Get events for the date specified and next number of days past
+        it.
+      operationId: postGeteventsforrangelength
+      x-api-path-slug: geteventsforrangelength-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Range
+      - Length
+  /GetEventsForToday:
+    get:
+      summary: Get Events For Today
+      description: Get all the events released today.
+      operationId: postGeteventsfortoday
+      x-api-path-slug: geteventsfortoday-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Today
+  /GetEventsForTomorrow:
+    get:
+      summary: Get Events For Tomorrow
+      description: Get all the events released tomorrow.
+      operationId: postGeteventsfortomorrow
+      x-api-path-slug: geteventsfortomorrow-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Tomorrow
+  /GetEventsReleasedForRange:
+    get:
+      summary: Get Events Released For Range
+      description: Get events released for the specified range.
+      operationId: postGeteventsreleasedforrange
+      x-api-path-slug: geteventsreleasedforrange-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Released
+      - Range
+  /GetEventsReleasedForRangeLength:
+    get:
+      summary: Get Events Released For Range Length
+      description: Get events released for the date specified and next number of days
+        past it.
+      operationId: postGeteventsreleasedforrangelength
+      x-api-path-slug: geteventsreleasedforrangelength-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Events
+      - Released
+      - Range
+      - Length
+  /SearchEvents:
+    get:
+      summary: Search Events
+      description: Perform a complex query on events.
+      operationId: postSearchevents
+      x-api-path-slug: searchevents-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Search
+      - Events
+  /ListEventCodes:
+    get:
+      summary: List Event Codes
+      description: Get all of the event codes available to query on.
+      operationId: postListeventcodes
+      x-api-path-slug: listeventcodes-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - List
+      - Event
+      - Codes
+  /GetEventDetails:
+    get:
+      summary: Get Event Details
+      description: Get the details for the specified event.
+      operationId: postGeteventdetails
+      x-api-path-slug: geteventdetails-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Event
+      - Details
+  /GetMultipleEventDetails:
+    get:
+      summary: Get Multiple Event Details
+      description: Get the details for the specified events.
+      operationId: postGetmultipleeventdetails
+      x-api-path-slug: getmultipleeventdetails-get
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Market Data
+      - Multiple
+      - Event
+      - Details
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
