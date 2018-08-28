@@ -1,27 +1,15 @@
 ---
 name: Eventful
-description: Eventful, the leading digital media company, powers the online ecosystem
-  of local events and entertainment. Over 20 million people rely on Eventful to find
-  out whatrsquo;s happening and decide what to do. nbsp;Eventfulrsquo;s unique, social
-  media platform, ldquo;Demand it!rdquo; empowers fans to influence content and location
-  of entertainment and live events. Music promoters, film studios, ticketing companies
-  and other industry providers use Demand it! to engage with fans and determine their
-  routing schedules or theatrical distribution. nbsp;National marketers rely on Eventful
-  to drive local awareness, commerce, attendance and tune-in. Thousands of digital
-  publishers also rely on Eventful to power their local events and entertainment content.
-image: ""
+x-slug: eventful
+description: Find things to do in Los Angeles, CA. Eventful provides the most popular
+  Los Angeles events, concerts, movies, comedy, nightlife, family events, and more.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/400-eventful.jpg
 x-kinRank: "8"
-x-alexaRank: ""
-tags:
-- Stack Network
-- Guide
-- Events
-- Events
-- Concerts
-- Calendar
-created: "2018-03-10"
-modified: "2018-03-10"
-url: https://raw.githubusercontent.com/streamdata-gallery/events/master/_listings/eventful/apis.yaml
+x-alexaRank: "26333"
+tags: Events
+created: "2018-08-27"
+modified: "2018-08-27"
+url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/eventful/apis.md
 specificationVersion: "0.14"
 apis: []
 x-common:
@@ -31,6 +19,8 @@ x-common:
   url: http://eventful.com/blog/
 - type: x-blog-rss
   url: http://blog.eventful.com/feed/
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/eventful
 - type: x-crunchbase
   url: http://www.crunchbase.com/company/eventful
 - type: x-data-licensing

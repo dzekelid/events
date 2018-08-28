@@ -11,39 +11,30 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "10"
 x-alexaRank: "0"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Amazon Redshift API Describe Events
-  x-api-slug: amazon-redshift-api
+- name: AWS Redshift API - Describe Events
+  x-api-slug: actiondescribeevents-get
   description: |-
     Returns events related to clusters, security groups, snapshots, and parameter
                 groups for the past 14 days.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
   humanURL: https://aws.amazon.com/redshift/
-  baseURL: ://///?Action=DescribeEvents
-  tags: Events
+  baseURL: :///
+  tags: Amazon Web Services, Data, Data Warehouse, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Databases, Profiles, Relative Data, Service
+    API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/actiondescribeevents-get-openapi.md
-- name: Amazon Redshift API
-  x-api-slug: amazon-redshift-api
-  description: Amazon Redshift is a fast, fully managed, petabyte-scaledata warehousethat
-    makes it simple and cost-effective to analyze all your data using your existing
-    business intelligence tools. Start small for $0.25 per hour with no commitments
-    and scale to petabytes for $1,000 per terabyte per year, less than a tenth the
-    cost of traditional solutions. Customers typically see 3x compression, reducing
-    their costs to $333 per uncompressed terabyte per year.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonRedshift.png
-  humanURL: https://aws.amazon.com/redshift/
-  baseURL: :///
-  tags: Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/aws-redshift/openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://aws.rds.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://aws.redshift.stack.network
 - type: x-best-practices
   url: https://aws.amazon.com/redshift/developer-resources/#best-practices
 - type: x-command-line-interface

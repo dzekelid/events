@@ -7,13 +7,13 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-
 x-kinRank: "8"
 x-alexaRank: "10322"
 tags: Events
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/apis.md
 specificationVersion: "0.14"
 apis:
-- name: New Relic Get Alerts Events. Format
-  x-api-slug: new-relic
+- name: New Relic - Get Alerts Events. Format
+  x-api-slug: alerts-events-format-get
   description: "This API endpoint allows you to list the alert events for your account.\n\nAlerts
     events can be filter by product, target type, group ID, instance ID, and event
     type.\n\nThe options for products are: APM, BROWSER, MOBILE, SERVERS, PLUGINS,
@@ -27,23 +27,17 @@ apis:
     pagination."
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-relic.jpg
   humanURL: https://newrelic.com/
-  baseURL: https:///v2///alerts_events.{format}
-  tags: Alerts, Events., Format
+  baseURL: https:///v2/
+  tags: Monitoring, Performance, Stack Network, Technology, SaaS, API Service Provider,
+    Profiles, Relative Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/alerts-events-format-get-openapi.md
-- name: New Relic
-  x-api-slug: new-relic
-  description: New Relic???s digital intelligence platform lets developers, ops, and
-    tech teams measure and monitor the performance of their applications and infrastructure.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-relic.jpg
-  humanURL: https://newrelic.com/
-  baseURL: https:///v2/
-  tags: Events
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/events/master/_listings/new-relic/openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://netlicensing.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://new.relic.stack.network
 - type: x-blog
   url: https://blog.newrelic.com/
 - type: x-blog-rss
